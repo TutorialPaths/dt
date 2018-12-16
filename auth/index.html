@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <!--$[def groups]:
+        @user IF user,
+        @no-user !IF user,
+        <![end def]$-->
+
+        <!--$[def IMPORTS]:
+        @common-head DOM:gl/common-head.html markedHTML,
+        <![end def]$-->
+
+        <!--$[import common-head]$-->
+
+        <link rel="stylesheet" href="https://dom.tutorialpaths.com/auth/bundle.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Mono">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <title>TutorialPaths</title>
+        <link rel="icon" href="https://dom.tutorialpaths.com/branding/image-icon.png">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.jsdelivr.net/gh/LachlanWalls/JStools/JStools.js"></script>
+        <script>let tls = JStools.start()</script>
+    </head>
+    <body onload="window.location.hash = '#login'">
+        <div class="auth">
+            <div class="nav">
+                <div role="progressbar" class="mdc-linear-progress mdc-linear-progress--indeterminate not-loading">
+                    <div class="mdc-linear-progress__buffering-dots"></div>
+                    <div class="mdc-linear-progress__buffer"></div>
+                    <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
+                        <span class="mdc-linear-progress__bar-inner"></span>
+                    </div>
+                    <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
+                        <span class="mdc-linear-progress__bar-inner"></span>
+                    </div>
+                </div>
+                <div class="overlay"></div>
+                <img class="logo" src="https://dom.tutorialpaths.com/branding/long.png">
+                <div class="mdc-tab-bar" role="tablist">
+                    <div class="mdc-tab-scroller">
+                        <div class="mdc-tab-scroller__scroll-area">
+                            <div class="mdc-tab-scroller__scroll-content">
+
+                                <button class="mdc-tab mdc-tab--login mdc-tab--active" role="tab" aria-selected="true" tabindex="-1" onclick="window.location.hash = '#login'">
+                                    <span class="mdc-tab__content">
+                                        <span class="mdc-tab__text-label">Login</span>
+                                    </span>
+                                    <span class="mdc-tab-indicator mdc-tab-indicator--active"><span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span></span>
+                                    <span class="mdc-tab__ripple"></span>
+                                </button>
+
+                                <button class="mdc-tab mdc-tab--register mdc-tab--active" role="tab" aria-selected="true" tabindex="-1" onclick="window.location.hash = '#register'">
+                                    <span class="mdc-tab__content">
+                                        <span class="mdc-tab__text-label">Register</span>
+                                    </span>
+                                    <span class="mdc-tab-indicator"><span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span></span>
+                                    <span class="mdc-tab__ripple"></span>
+                                </button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content">
+                <form class="login">
+                    <div class="mdc-text-field mdc-text-field--outlined">
+                        <input type="text" id="lg-username" class="mdc-text-field__input" required autocomplete="username" name="username">
+                        <label for="lg-username" class="mdc-floating-label">Username or Email</label>
+                        <div class="mdc-notched-outline"><svg><path class="mdc-notched-outline__path"/></svg></div>
+                        <div class="mdc-notched-outline__idle"></div>
+                    </div>
+
+                    <div class="mdc-text-field mdc-text-field--outlined">
+                        <input type="password" id="lg-password" class="mdc-text-field__input" required autocomplete="current-password" name="password">
+                        <label for="lg-password" class="mdc-floating-label">Password</label>
+                        <div class="mdc-notched-outline"><svg><path class="mdc-notched-outline__path"/></svg></div>
+                        <div class="mdc-notched-outline__idle"></div>
+                    </div>
+
+                    <div class="footer">
+                        <input type="submit" value="LOGIN" class="mdc-button mdc-button--raised">
+                    </div>
+                </form>
+                <form class="register">
+                    <div class="mdc-text-field mdc-text-field--outlined">
+                        <input type="email" id="rg-email" class="mdc-text-field__input" required autocomplete="email" name="email">
+                        <label for="rg-email" class="mdc-floating-label">Email Address</label>
+                        <div class="mdc-notched-outline"><svg><path class="mdc-notched-outline__path"/></svg></div>
+                        <div class="mdc-notched-outline__idle"></div>
+                    </div>
+
+                    <div class="mdc-text-field mdc-text-field--outlined helper">
+                        <input type="password" id="rg-password" class="mdc-text-field__input" required autocomplete="new-password" name="password" minlength="8" aria-controls="rg-password-ht" aria-describedby="rg-password-ht">
+                        <label for="rg-password" class="mdc-floating-label">Password</label>
+                        <div class="mdc-notched-outline"><svg><path class="mdc-notched-outline__path"/></svg></div>
+                        <div class="mdc-notched-outline__idle"></div>
+                    </div>
+                    <p class="mdc-text-field-helper-text mdc-text-field-helper-text--validation-msg rg-password-ht" aria-hidden="true">Password must be at least 8 characters</p>
+
+                    <div class="footer">
+                        <input type="submit" value="CONTINUE" class="mdc-button mdc-button--raised">
+                    </div>
+                </form>
+                <form class="register-second">
+                    <div class="mdc-text-field mdc-text-field--outlined" style="width: 56px;">
+                        <input type="number" class="mdc-text-field__input" required autocomplete="off" name="code1" style="text-align: center;" placeholder="x">
+                        <div class="mdc-notched-outline"><svg><path class="mdc-notched-outline__path"/></svg></div>
+                        <div class="mdc-notched-outline__idle"></div>
+                    </div>
+                    <div class="mdc-text-field mdc-text-field--outlined" style="width: 56px;">
+                        <input type="number" class="mdc-text-field__input" required autocomplete="off" name="code2" style="text-align: center;" placeholder="x">
+                        <div class="mdc-notched-outline"><svg><path class="mdc-notched-outline__path"/></svg></div>
+                        <div class="mdc-notched-outline__idle"></div>
+                    </div>
+                    <div class="mdc-text-field mdc-text-field--outlined" style="width: 56px;">
+                        <input type="number" class="mdc-text-field__input" required autocomplete="off" name="code3" style="text-align: center;" placeholder="x">
+                        <div class="mdc-notched-outline"><svg><path class="mdc-notched-outline__path"/></svg></div>
+                        <div class="mdc-notched-outline__idle"></div>
+                    </div>
+                    <div class="mdc-text-field mdc-text-field--outlined" style="width: 56px;">
+                        <input type="number" class="mdc-text-field__input" required autocomplete="off" name="code4" style="text-align: center;" placeholder="x" placeholder="x">
+                        <div class="mdc-notched-outline"><svg><path class="mdc-notched-outline__path"/></svg></div>
+                        <div class="mdc-notched-outline__idle"></div>
+                    </div>
+                    <div class="mdc-text-field mdc-text-field--outlined" style="width: 56px;">
+                        <input type="number" class="mdc-text-field__input" required autocomplete="off" name="code5" style="text-align: center;" placeholder="x">
+                        <div class="mdc-notched-outline"><svg><path class="mdc-notched-outline__path"/></svg></div>
+                        <div class="mdc-notched-outline__idle"></div>
+                    </div>
+                    <div class="mdc-text-field mdc-text-field--outlined" style="width: 56px;">
+                        <input type="number" class="mdc-text-field__input" required autocomplete="off" name="code6" style="text-align: center;" placeholder="x">
+                        <div class="mdc-notched-outline"><svg><path class="mdc-notched-outline__path"/></svg></div>
+                        <div class="mdc-notched-outline__idle"></div>
+                    </div>
+
+                    <p class="mdc-text-field-helper-text mdc-text-field-helper-text--persistent" aria-hidden="true" style="margin-top: -10px; margin-bottom: 10px;">Enter the code you received in an email. <span class="helper-link" id="d-re-toggle">Didn't receive it?</span></p>
+
+                    <div class="mdc-text-field mdc-text-field--outlined">
+                        <input type="text" id="rg-username" class="mdc-text-field__input" required autocomplete="username" name="username">
+                        <label for="rg-username" class="mdc-floating-label">Desired Username</label>
+                        <div class="mdc-notched-outline"><svg><path class="mdc-notched-outline__path"/></svg></div>
+                        <div class="mdc-notched-outline__idle"></div>
+                    </div>
+
+                    <div class="mdc-text-field mdc-text-field--outlined helper">
+                        <input type="password" id="rg-confpassword" class="mdc-text-field__input" required autocomplete="new-password" name="confpassword" pattern="testpassword" aria-controls="rg-confpassword-ht" aria-describedby="rg-confpassword-ht">
+                        <label for="rg-confpassword" class="mdc-floating-label">Confirm Password</label>
+                        <div class="mdc-notched-outline"><svg><path class="mdc-notched-outline__path"/></svg></div>
+                        <div class="mdc-notched-outline__idle"></div>
+                    </div>
+                    <p class="mdc-text-field-helper-text mdc-text-field-helper-text--validation-msg rg-confpassword-ht" aria-hidden="true">Password must match original password</p>
+
+                    <div class="footer">
+                        <input type="button" value="BACK" class="mdc-button mdc-button--outlined" onclick="window.location.hash = '#register'" style="margin-right: 20px;">
+                        <input type="submit" value="REGISTER" class="mdc-button mdc-button--raised">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div id="dialog-resendemail" class="mdc-dialog" role="alertdialog" aria-modal="true" aria-labelledby="d-re-title" aria-describedby="d-re-content">
+            <div class="mdc-dialog__container">
+                <div class="mdc-dialog__surface">
+                    <h2 class="mdc-dialog__title" id="d-re-title">Resend Verification Email</h2>
+                    <div class="mdc-dialog__content" id="d-re-content">
+                        <p>A verification email was sent to [email]. If this email is incorrect, close the dialog, click back and update the email. Otherwise, check your spam folder and resend.</p>
+                    </div>
+                    <footer class="mdc-dialog__actions">
+                        <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="close">Cancel</button>
+                        <button type="button" class="mdc-button mdc-dialog__button" data-mdc-dialog-action="accept" onclick="window.location.hash = '#register'; document.querySelector('form.register .footer input').click()">Resend</button>
+                    </footer>
+                </div>
+            </div>
+            <div class="mdc-dialog__scrim"></div>
+        </div>
+
+        <div class="mdc-snackbar mdc-snackbar--align-start" aria-live="assertive" aria-atomic="true" aria-hidden="true">
+            <div class="mdc-snackbar__text"></div>
+            <div class="mdc-snackbar__action-wrapper">
+                <button type="button" class="mdc-snackbar__action-button"></button>
+            </div>
+        </div>
+
+        <script src="https://dom.tutorialpaths.com/auth.bundle.js"></script>
+    </body>
+</html>

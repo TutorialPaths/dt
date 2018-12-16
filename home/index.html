@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--$[def groups]:
+        @user IF user,
+        @no-user IFNOT user
+        <![end def]$-->
+
+        <!--$[def IMPORTS]:
+        @nav auto:nav auto,
+        @common-head DOM:gl/common-head.html markedHTML,
+        @support-pages var:support-pages markedJS['/*';'*/';'[]']
+        <![end def]$-->
+
+        <!-- this goes before the common head, so that the nav styles are primary, so these styles don't affect the nav styles -->
+        <link rel="stylesheet" href="https://dom.tutorialpaths.com/home/bundle.css">
+
+        <!--$[import common-head]$-->
+
+    </head>
+    <body>
+        <!--$[_CONTENT]-->
+
+        <div class="control-container">
+            <ul class="control-box">
+                <li class="selected" onclick="window.location.href = 'https://tutorialpaths.com'"><i class="control-button material-icons">stars</i></li>
+                <li onclick="window.location.href = 'https://tutorialpaths.com/new'"><i class="control-button material-icons">access_time</i></li>
+                <li onclick="window.location.href = 'https://tutorialpaths.com/top'"><i class="control-button material-icons">trending_up</i></li>
+                <li onclick="window.location.href = 'https://tutorialpaths.com/trending'"><i class="control-button material-icons">whatshot</i></li>
+            </ul>
+            <ul class="control-box control-box--view">
+                <li class="selected"><i class="view_headline control-button material-icons">view_headline</i></li>
+                <li><i class="view_stream control-button material-icons">view_stream</i></li>
+                <li><i class="view_column control-button material-icons">view_column</i></li>
+                <li><i class="view_module control-button material-icons">view_module</i></li>
+            </ul>
+        </div>
+
+        <div class="content-container view_headline">
+            <div class="notice" style="display: none;">
+                <i class="material-icons" onclick="this.parentElement.style.display = 'none'">close</i>
+                <h2>Welcome to TutorialPaths</h2>
+                <h4>The ultimate path-based tutorial platform</h4>
+                <h5>Where do I go from here?</h5>
+                <ul>
+                    <li>- <a href="//tutorialpaths.com/auth">Register an account</a> and tune your interests</li>
+                    <li>- Take our <a href="//tutorialpaths.com/t/tutorialpaths-tutorial">website tutorial</a> and become an expert</li>
+                    <li>- <a href="//tutorialpaths.com/create">Start making tutorials</a> and grow your reputation</li>
+                </ul>
+            </div>
+            <div class="error" style="display: none;">
+                <h4>Something went wrong fetching the tutorials.</h4>
+            </div>
+        </div>
+
+        <div class="ad-container">
+
+        </div>
+
+        <!--[_CONTENT]$-->
+
+        <script src="https://dom.tutorialpaths.com/home.bundle.js"></script>
+    </body>
+</html>

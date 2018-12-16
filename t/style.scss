@@ -1,0 +1,252 @@
+@import '../gl/style.scss';
+
+.content-container {
+    background-color: transparent;
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px 20px 0px 20px;
+
+    width: calc(100vw - 360px);
+    height: calc(100vh - 20px);
+}
+
+.ad-container {
+    position: fixed;
+    display: inline-block;
+    vertical-align: top;
+    margin: 20px 10px 0px 0px;
+
+    width: 310px;
+    height: 610px;
+    border-radius: 4px;
+    @include mdc-elevation(1);
+}
+
+.content-container .head {
+    width: calc(100% - 30px);
+    height: 100px;
+    margin-bottom: 10px;
+    @include mdc-elevation(1);
+    border-radius: 8px;
+    padding: 15px;
+    position: relative;
+
+    .tags {
+        margin: 0;
+        @include mdc-typography(caption);
+        opacity: 0.7;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .title {
+        margin: 0;
+        @include mdc-typography(headline5);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .description {
+        margin: 5px 0 0 0;
+        @include mdc-typography(body2);
+        opacity: 0.7;
+        height: 40px;
+        overflow-y: auto;
+        overflow-x: hidden;
+        white-space: normal;
+        width: calc(100% - 120px);
+    }
+
+    .info-container {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        height: 60px;
+
+        img {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            width: 40px;
+            height: 40px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .info-user {
+            margin: 3px 60px 0 0;
+            text-align: right;
+            @include mdc-typography(body1);
+        }
+
+        .rating-container {
+            margin: 0 60px 0 0;
+            text-align: right;
+            height: 25px;
+
+            div {
+                display: inline-block;
+                vertical-align: bottom;
+                margin-right: 8px;
+
+                i {
+                    display: inline-block;
+                    color: #FF9100;
+                    width: 12px;
+                    font-size: 12px;
+                    &.half { color: #FFC375; }
+                    &.none { color: #FFF1E0; }
+                }
+            }
+
+            p {
+                display: inline-block;
+                margin: 0;
+                @include mdc-typography(caption);
+            }
+        }
+    }
+
+    .feedback-container {
+        position: absolute;
+        bottom: 0px;
+        right: 15px;
+        height: 60px;
+        width: 100px;
+
+        i { opacity: 0.4; }
+        i.upvote { color: $mdc-theme-primary; }
+        i.downvote { color: $mdc-theme-secondary; }
+        i.selected { opacity: 1; }
+    }
+}
+
+.content-container .body {
+    width: 100%;
+    height: calc(100vh - 240px);
+    margin-bottom: 10px;
+    @include mdc-elevation(3);
+    border-radius: 8px;
+    position: relative;
+    background-color: transparent;
+
+    .step-container {
+        // this it the magic bit. changing from hidden to scroll would let you scroll between the steps.
+        overflow-x: hidden;
+        overflow-y: auto;
+        white-space: nowrap;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        border-radius: 8px;
+
+        .step {
+            width: calc(100% - 30px);
+            height: calc(100% - 1350px);
+            padding: 15px 15px 120px 15px;
+            display: inline-block;
+            vertical-align: top;
+            white-space: normal;
+            margin: 0;
+            border-radius: 8px;
+            position: relative;
+            overflow-x: hidden;
+            overflow-y: auto;
+
+
+            div.counter {
+                margin: 0;
+                @include mdc-typography(body2);
+                opacity: 0.7;
+            }
+
+            h3 {
+                margin: 0;
+                @include mdc-typography(headline4);
+            }
+
+            p.description {
+                margin: 10px 0 0 0;
+                @include mdc-typography(body1);
+                opacity: 0.8;
+            }
+
+            div.footer-container {
+                position: absolute;
+                width: calc(100% - 15px);
+                bottom: 0;
+                left: 15px;
+
+                h5.similar {
+                    @include mdc-typography(headline6);
+                    font-size: 1rem;
+                    margin: 5px 0px;
+                }
+
+                div.branch-container {
+                    width: 100%;
+                    height: auto;
+
+                    .branch {
+                        width: calc(100% / 3 - 53px);
+                        display: inline-block;
+                        vertical-align: top;
+                        min-height: 80px;
+                        border: 1px solid rgba(0, 0, 0, 0.2);
+                        border-radius: 8px;
+                        padding: 15px;
+                        margin: 1px 16px 16px 1px;
+                        white-space: normal;
+                        overflow-x: hidden;
+                        cursor: pointer;
+
+                        &:hover { border: 2px solid $mdc-theme-primary; margin: 0px 15px 15px 0px; }
+
+                        h5.title {
+                            margin: 0;
+                            @include mdc-typography(headline5);
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                        }
+
+                        p.description {
+                            margin: 5px 0 0 0;
+                            @include mdc-typography(body2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .ad-container {
+        display: none;
+    }
+
+    .content-container {
+        width: calc(100vw - 40px);
+    }
+}
+
+.content-container .error {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 10px;
+    @include mdc-elevation(1);
+    border-radius: 8px;
+
+    h4 {
+        text-align: center;
+        margin: 0;
+        padding-top: 15px;
+        @include mdc-typography(headline6);
+        font-size: 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}

@@ -1,0 +1,242 @@
+@import '../gl/style.scss';
+
+.mdc-list-item--partial,
+.mdc-list-item--partial i {
+    color: rgba(98, 0, 238, 0.87) !important;
+}
+
+#main-content {
+    background-color: $mdc-theme-background;
+}
+
+body {
+  display: flex;
+  margin: 0px;
+  background-color: #FFFFFF;
+}
+
+div {
+    background-color: $mdc-theme-surface;
+}
+
+.mdc-drawer-app-content {
+  flex: auto;
+  overflow: auto;
+}
+
+.main-content {
+  overflow: auto;
+  height: 100%;
+  background-color: $mdc-theme-background;
+}
+
+.app-bar {
+  position: absolute;
+  height: 56px;
+  background-color: white;
+  border-bottom: 1px solid #D3D3D3;
+}
+
+.app-bar .mdc-linear-progress {
+    display: none;
+}
+
+.app-bar.app-bar--loading .mdc-linear-progress {
+    display: block;
+}
+
+.app-drawer__toggle {
+    transition-duration: 0.3s;
+    color: $mdc-theme-primary !important;
+}
+
+.app-drawer__toggle.hidden {
+    transition-duration: 0.3s;
+    margin-left: -60px;
+}
+
+.app-drawer {
+    @include mdc-drawer-activated-overlay-color($mdc-theme-secondary);
+    @include mdc-drawer-item-activated-text-ink-color($mdc-theme-secondary);
+    @include mdc-drawer-item-activated-icon-ink-color($mdc-theme-secondary);
+}
+
+.mdc-top-app-bar__title {
+    padding-top: 7px;
+    padding-left: 10px;
+}
+
+@keyframes popup_animation {
+    0% {
+        opacity: 0;
+        transform: scale(0.7, 0.7);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1, 1);
+    }
+}
+
+.main-overlay {
+    display: none;
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+}
+
+.main-overlay.showing {
+    display: block;
+}
+
+.popup {
+    display: none;
+    position: absolute;
+    top: calc(50vh - 250px);
+    min-height: 50px;
+    margin: 0px auto;
+    z-index: 101;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.popup-container {
+    position: relative;
+    width: calc(100% - 40px);
+    height: calc(100% - 40px);
+    padding: 20px;
+    background-color: transparent;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: gray;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.popup h4 {
+    margin: 10px 0px 10px 0px;
+}
+
+.popup.showing {
+    animation-name: popup_animation;
+    animation-duration: 0.3s;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+.app-bar__icons button {
+    color: $mdc-theme-primary !important;
+    width: 38px;
+    @include mdc-icon-button-size(24px, 24px, 5px);
+}
+
+.app-bar__icons button.first-of-set {
+    margin-left: 20px;
+}
+
+.app-bar__icons {
+    transition-duration: 0.5s;
+    position: absolute;
+    top: -1px;
+    right: calc(-100vw - 240px);
+}
+
+.app-bar__icons.showing {
+    transition-duration: 0.5s;
+    right: 5px;
+}
+
+.app-bar__search {
+    height: 40px;
+    margin-left: 8px;
+    transition-duration: 0.1s;
+    width: 30px;
+}
+
+.app-bar__search.showing {
+    transition-duration: 0.1s;
+    width: 200px;
+}
+
+.app-bar__search.hidden .mdc-notched-outline__idle {
+    opacity: 0;
+}
+
+
+.app-bar__button--search {
+    padding-top: 8px;
+    padding-left: 5px;
+    color: $mdc-theme-primary !important;
+    outline: none;
+    cursor: pointer;
+}
+
+#popup__search {
+    border-radius: 100px;
+}
+
+#popup__search .popup-container .mdc-text-field {
+    @include mdc-text-field-outline-shape-radius(27px);
+}
+
+.search-popup-icon {
+    margin: 15px 10px 0px 0px;
+    cursor: pointer;
+    outline: none;
+}
+
+#popup__search input,
+.app-bar__search input {
+    @include mdc-text-field-label-color($mdc-theme-secondary);
+    @include mdc-text-field-focused-outline-color($mdc-theme-secondary);
+}
+
+#popup__support div table tbody td {
+    vertical-align: top;
+    max-width: 0px;
+}
+
+#popup__support div table tbody td h6 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+#popup__support div table tbody td .content {
+    overflow-y: auto;
+    max-height: 300px;
+    height: auto;
+    width: 100%;
+}
+
+#popup__support div table tbody td .content ul li {
+    cursor: pointer;
+    margin-bottom: 10px;
+    padding: 0px 8px;
+}
+
+#popup__support div table tbody td .content ul li span span.mdc-list-item__primary-text,
+#popup__settings div ul li span .mdc-list-item__primary-text {
+    margin-top: -15px;
+}
+
+#popup__support div table tbody td .content .mdc-button,
+#popup__settings div ul li {
+    margin-bottom: 10px;
+}
+
+.mdc-top-app-bar__title img {
+    height: 54px;
+
+    @media screen and (max-width: 450px) {
+        height: 40px;
+    }
+}

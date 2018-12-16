@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--$[def groups]:
+        @user IF user,
+        @no-user IFNOT user
+        <![end def]$-->
+
+        <!--$[def IMPORTS]:
+        @nav auto:nav auto,
+        @common-head DOM:gl/common-head.html markedHTML,
+        @support-pages var:support-pages markedJS['/*';'*/';'[]']
+        <![end def]$-->
+
+        <!-- this goes before the common head, so that the nav styles are primary, so these styles don't affect the nav styles -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+        <link rel="stylesheet" href="https://dom.tutorialpaths.com/t/bundle.css">
+
+        <!--$[import common-head]$-->
+
+    </head>
+    <body>
+        <!--$[_CONTENT]-->
+        <div id="app-bar" class="app-bar"></div>
+        <div class="content-container">
+            <div class="error" style="display: none;">
+                <h4>Something went wrong fetching the tutorial.</h4>
+            </div>
+        </div>
+
+        <div class="ad-container">
+
+        </div>
+
+        <!--[_CONTENT]$-->
+
+        <script src="https://dom.tutorialpaths.com/t.bundle.js"></script>
+    </body>
+</html>

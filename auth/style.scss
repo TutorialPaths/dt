@@ -1,0 +1,142 @@
+@import '../gl/style.scss';
+
+body {
+    background-image: url(https://dom.tutorialpaths.com/branding/auth-background.png);
+    background-size: cover;
+    margin: 0;
+}
+
+div.auth {
+    position: relative;
+    width: 360px;
+    height: 500px;
+    top: calc(50vh - 250px);
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
+    padding: 0px 20px;
+}
+
+div.auth .nav {
+    height: 128px;
+    margin-bottom: 30px;
+}
+
+div.auth .nav .mdc-linear-progress {
+    position: absolute;
+    z-index: 10;
+    left: 0px;
+    border-radius: 20px 20px 0px 0px;
+    display: none;
+}
+
+div.auth .nav .mdc-linear-progress.loading {
+    display: block;
+}
+
+div.auth .nav .overlay {
+    position: absolute;
+    z-index: 9;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: none;
+}
+
+div.auth .nav .mdc-linear-progress.loading ~ .overlay {
+    display: block;
+}
+
+div.auth .nav .logo {
+    position: relative;
+    width: 270px;
+    top: 23px;
+    margin: auto;
+    display: block;
+}
+
+div.auth .nav .mdc-tab-bar {
+    position: relative;
+    top: 35px;
+}
+
+div.auth .content {
+    width: 360px;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+div.auth .content.login form.login {
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+    margin-left: 0px;
+}
+
+div.auth .content.register form.login {
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+    margin-left: -389px;
+}
+
+div.auth .content.register-second form.login {
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+    margin-left: -778px;
+}
+
+div.auth .content form {
+    width: 360px;
+    height: 332px;
+    display: inline-block;
+    margin: 5px 25px 0px 0px;
+    vertical-align: top;
+    white-space: normal;
+}
+
+div.auth .content form.register-second {
+    margin: 0px;
+}
+
+div.auth .content form .mdc-text-field {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+div.auth .content form .mdc-text-field.helper {
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+div.auth .content form .mdc-text-field.helper + p.mdc-text-field-helper-text {
+    margin-bottom: 10px;
+}
+
+div.auth .content form .footer {
+    margin-top: 15px;
+    text-align: right;
+}
+
+div.auth .content form .footer input[type="submit"] {
+    @include mdc-button-filled-accessible($mdc-theme-secondary);
+}
+
+div.auth .content form .footer input[type="button"] {
+    @include mdc-button-ink-color($mdc-theme-secondary);
+    @include mdc-button-outline-color($mdc-theme-secondary);
+}
+
+
+div.auth .content form p .helper-link {
+    cursor: pointer;
+    color: blue;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}

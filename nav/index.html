@@ -1,0 +1,268 @@
+<aside class="app-drawer mdc-drawer mdc-drawer--dismissible" style="position: fixed;">
+    <div class="mdc-drawer__content">
+        <nav class="mdc-list">
+
+            <a class="mdc-list-item mdc-list-item--activated app-drawer-link data_link" href="/" aria-selected="true">
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">home</i>
+                <span class="mdc-list-item__text">Home</span>
+            </a>
+            <a class="mdc-list-item app-drawer-link data_popover-search" href="#">
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">search</i>
+                <span class="mdc-list-item__text">Search</span>
+            </a>
+            <a class="mdc-list-item app-drawer-link data_link" href="/trending">
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">whatshot</i>
+                <span class="mdc-list-item__text">Trending</span>
+            </a>
+
+            <!--$[start groups@user]:
+            <hr class="mdc-list-divider">
+            <h6 class="mdc-list-group__subheader">User</h6>
+            <a class="mdc-list-item app-drawer-link data_link" href="/create">
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">add</i>
+                <span class="mdc-list-item__text">Create Tutorial</span>
+            </a>
+            <a class="mdc-list-item app-drawer-link data_link" href="/u/me">
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">person</i>
+                <span class="mdc-list-item__text">Account</span>
+            </a>
+            <a class="mdc-list-item app-drawer-link data_popover-logout" href="#">
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">exit_to_app</i>
+                <span class="mdc-list-item__text">Logout</span>
+            </a>
+            <![end groups@user]$-->
+
+            <!--$[start groups@no-user]:
+            <hr class="mdc-list-divider">
+            <h6 class="mdc-list-group__subheader">No user</h6>
+            <a class="mdc-list-item app-drawer-link data_link" href="/auth?r=create">
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">add</i>
+                <span class="mdc-list-item__text">Create Tutorial</span>
+            </a>
+            <a class="mdc-list-item app-drawer-link data_link" href="/auth">
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">vpn_key</i>
+                <span class="mdc-list-item__text">Authenticate</span>
+            </a>
+            <![end groups@no-user]$-->
+
+            <hr class="mdc-list-divider">
+            <h6 class="mdc-list-group__subheader">Accessibility</h6>
+            <a class="mdc-list-item app-drawer-link data_link" href="/tp/about">
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">info</i>
+                <span class="mdc-list-item__text">Information</span>
+            </a>
+            <a class="mdc-list-item app-drawer-link data_popover-support" href="#">
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">help</i>
+                <span class="mdc-list-item__text">Support</span>
+            </a>
+            <a class="mdc-list-item app-drawer-link data_popover-settings" href="#">
+                <i class="material-icons mdc-list-item__graphic" aria-hidden="true">settings</i>
+                <span class="mdc-list-item__text">Settings</span>
+            </a>
+        </nav>
+    </div>
+</aside>
+
+<div class="mdc-drawer-app-content">
+    <header class="mdc-top-app-bar app-bar app-bar--loading" id="app-bar">
+        <div class="mdc-top-app-bar__row">
+            <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+                <a href="#" class="app-drawer__toggle material-icons mdc-top-app-bar__navigation-icon hidden">menu</a>
+                <span class="mdc-top-app-bar__title">
+                    <img src="//dom.tutorialpaths.com/branding/long.png" onclick="window.location.href = 'https://tutorialpaths.com'" style="cursor: pointer;">
+                </span>
+            </section>
+
+            <section class="app-bar__icons showing mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
+
+                <button class="app-bar__button mdc-icon-button material-icons mdc-top-app-bar__action-item" onclick="window.location.href = '/'">home</button>
+                <div class="app-bar__search hidden mdc-text-field mdc-text-field--outlined" style="margin-left: 2px; margin-right: 3px;">
+                    <i class="app-bar__button--search material-icons mdc-text-field__icon" tabindex="0" role="button">search</i>
+                    <input type="text" id="tf-outlined" class="mdc-text-field__input">
+                    <label for="tf-outlined" class="mdc-floating-label"></label>
+                    <div class="mdc-notched-outline">
+                        <svg><path class="mdc-notched-outline__path"/></svg>
+                    </div>
+                    <div class="mdc-notched-outline__idle"></div>
+                </div>
+                <button class="app-bar__button mdc-icon-button material-icons mdc-top-app-bar__action-item" onclick="window.location.href = 'trending'">whatshot</button>
+
+                <!--$[start groups@user]:
+                <button class="app-bar__button mdc-icon-button material-icons mdc-top-app-bar__action-item first-of-set" onclick="window.location.href = 'create'">add</button>
+                <button class="app-bar__button mdc-icon-button material-icons mdc-top-app-bar__action-item" onclick="window.location.href = 'u/me'">person</button>
+                <button class="app-bar__button mdc-icon-button material-icons mdc-top-app-bar__action-item app-bar__button--logout">exit_to_app</button>
+                <![end groups@user]$-->
+
+                <!--$[start groups@no-user]:
+                <button class="app-bar__button mdc-icon-button material-icons mdc-top-app-bar__action-item first-of-set" onclick="window.location.href = 'auth?r=create'">add</button>
+                <button class="app-bar__button mdc-icon-button material-icons mdc-top-app-bar__action-item" onclick="window.location.href = 'auth'">vpn_key</button>
+                <![end groups@no-user]$-->
+
+                <button class="app-bar__button mdc-icon-button material-icons mdc-top-app-bar__action-item first-of-set" onclick="window.location.href = 'tp/about'">info</button>
+                <button class="app-bar__button mdc-icon-button material-icons mdc-top-app-bar__action-item app-bar__button--support">help</button>
+                <button class="app-bar__button mdc-icon-button material-icons mdc-top-app-bar__action-item app-bar__button--settings">settings</button>
+
+            </section>
+        </div>
+
+        <div role="progressbar" class="mdc-linear-progress mdc-linear-progress--indeterminate">
+            <div class="mdc-linear-progress__buffering-dots"></div>
+            <div class="mdc-linear-progress__buffer"></div>
+            <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar">
+                <span class="mdc-linear-progress__bar-inner"></span>
+            </div>
+            <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar">
+                <span class="mdc-linear-progress__bar-inner"></span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content" id="main-content">
+        <div class="mdc-top-app-bar--fixed-adjust" style="padding-top: 56px; background-color: transparent;">
+            <!--$[_CONTENT]$-->
+        </div>
+    </main>
+
+    <main class="main-overlay" id="main-overlay" onclick="popup(false, '')"></main>
+
+    <div class="mdc-elevation--z24 popup" id="popup__search" style="width: 700px;" def_width="700px" alt_link="/search">
+        <div class="popup-container" style="border-radius: 100px;">
+            <div class="mdc-text-field mdc-text-field--outlined" style="width: 100%;">
+                <input type="text" id="search-input" class="mdc-text-field__input" oninput="this.parentElement.querySelector('i').style.color = (this.value) ? '#7E57C2':'rgba(0, 0, 0, 0.54)'; this.parentElement.querySelector('i').setAttribute('onclick', (this.value) ? 'window.location.href = \'search?q=' + this.value + '\'':'')">
+                <label for="search-input" class="mdc-floating-label">Search</label>
+                <i class="search-popup-icon material-icons mdc-text-field__icon" tabindex="0" role="button">search</i>
+                <div class="mdc-notched-outline" style="background-color: transparent">
+                    <svg><path class="mdc-notched-outline__path"/></svg>
+                </div>
+                <div class="mdc-notched-outline__idle"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mdc-elevation--z24 popup" id="popup__logout" style="width: 500px;" def_width="500px" alt_link="/auth/logout#confirm">
+        <div class="popup-container">
+            <div class="popup-close material-icons">close</div>
+            <h4 class="mdc-typography--headline4">Confirm logout</h4>
+            <p class="mdc-typography--body1">This will disable auto-login and you will stay logged out until you manually log in again. This will only affect this device.</p>
+            <button class="mdc-button" style="left: calc(100% - 110px);" onclick="tls.cookies.set('sr:id', '', -20000); window.location.reload();">
+                <i class="material-icons mdc-button__icon" aria-hidden="true">exit_to_app</i>
+                LOGOUT
+            </button>
+        </div>
+    </div>
+
+    <div class="mdc-elevation--z24 popup" id="popup__support" style="width: 500px;" def_width="500px" alt_link="/support">
+        <div class="popup-container">
+            <div class="popup-close material-icons">close</div>
+            <table style="width: 100%">
+                <tbody>
+                    <td width="65%" class="articles" style="border-right: 1px solid lightgray; padding-right: 20px;">
+                        <h6 class="mdc-typography--subtitle2">Support Articles for this page</h6>
+                        <div class="content">
+                            <ul class="mdc-list" aria-orientation="vertical">Oops, there aren't any articles for this page.</ul>
+                        </div>
+                        <script>
+                            var pages = /*[import support-pages]*/[]
+                            /*pages = [
+                                {"title": "The Home Page", "description": "Working your way around the home page.", "url": "https://tutorialpaths.com/support/articles/0001/the-home-page"},
+                                {"title": "Filters and Layouts", "description": "Choosing the best filter and layout for you.", "url": "https://tutorialpaths.com/support/articles/0002/filters-and-layouts"}
+                            ]*/
+
+                            if (pages.length > 0) {
+                                document.querySelector("#popup__support div table tbody td.articles div.content ul").innerHTML = ""
+                            }
+
+                            for (i = 0; i < pages.length; i++) {
+                                if (i == 0) {
+                                    document.querySelector("#popup__support div table tbody td.articles div.content ul").innerHTML = ""
+                                }
+                                document.querySelector("#popup__support div table tbody td.articles div.content ul").innerHTML += '<li class="mdc-list-item" onclick="window.location.href = \'' + pages[i].url + '\'"><span class="mdc-list-item__text"><span class="mdc-list-item__primary-text">' + pages[i].title + '</span><span class="mdc-list-item__secondary-text">' + pages[i].description + '</span></span></li>'
+                            }
+                        </script>
+                    </td>
+                    <td width="35%" style="padding-left: 20px;">
+                        <h6 class="mdc-typography--subtitle2">Support Services</h6>
+                        <div class="content">
+                            <button class="mdc-button" onclick="window.location.href = '/support'">
+                                <i class="material-icons mdc-button__icon" aria-hidden="true">help</i>
+                                HOME
+                            </button>
+                            <button class="mdc-button" onclick="window.location.href = '/support/articles'">
+                                <i class="material-icons mdc-button__icon" aria-hidden="true">description</i>
+                                ARTICLES
+                            </button>
+                            <button class="mdc-button" onclick="window.location.href = '/support/contact'">
+                                <i class="material-icons mdc-button__icon" aria-hidden="true">contact_support</i>
+                                CONTACT
+                            </button>
+                        </div>
+                    </td>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="mdc-elevation--z24 popup" id="popup__settings" style="width: 500px;" def_width="500px" alt_link="/settings/page">
+        <div class="popup-container">
+            <h5 class="mdc-typography--headline5" style="margin-top: 0px; margin-bottom: 10px;">Page Settings</h5>
+            <div class="popup-close material-icons">close</div>
+            <ul class="settings mdc-list" aria-orientation="vertical">
+                <li class="mdc-list-item" onclick="">
+                    <span class="mdc-list-item__graphic material-icons">space_bar</span>
+                    <span class="mdc-list-item__text">
+                        <span class="mdc-list-item__primary-text">Fixed Nav Bar</span>
+                        <span class="mdc-list-item__secondary-text">Fixes the navigation at the top of the screen.</span>
+                    </span>
+                    <div class="mdc-checkbox mdc-list-item__meta">
+                        <input type="checkbox" class="mdc-checkbox__native-control" id="ps_fix_nav">
+                        <div class="mdc-checkbox__background">
+                            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24" style="color: white;">
+                                <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                            </svg>
+                            <div class="mdc-checkbox__mixedmark"></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mdc-list-item" onclick="">
+                    <span class="mdc-list-item__graphic material-icons">menu</span>
+                    <span class="mdc-list-item__text">
+                        <span class="mdc-list-item__primary-text">Hide Drawer Toggle</span>
+                        <span class="mdc-list-item__secondary-text">Hides the drawer toggle when icons are showing.</span>
+                    </span>
+                    <div class="mdc-checkbox mdc-list-item__meta">
+                        <input type="checkbox" class="mdc-checkbox__native-control" id="ps_hide_icon">
+                        <div class="mdc-checkbox__background">
+                            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24" style="color: white;">
+                                <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                            </svg>
+                            <div class="mdc-checkbox__mixedmark"></div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="footer" style="text-align: right;">
+                <button class="mdc-button" onclick="window.location.href = '/u/me/settings'">
+                    <i class="material-icons mdc-button__icon" aria-hidden="true">settings</i>
+                    ALL SETTINGS
+                </button>
+            </div>
+        </div>
+
+        <script>
+            function getPageSetting(setting) {
+                let settings = JSON.parse(tls.cookies.get("tp_ps"))
+                if (!settings) {
+                    settings = {"fix_nav": false, "hide_icon": false}
+                    tls.cookies.set("tp_ps", JSON.stringify(settings))
+                }
+                return settings[setting]
+            }
+
+            document.querySelector("#ps_fix_nav").checked = getPageSetting("fix_nav")
+            document.querySelector("#ps_hide_icon").checked = getPageSetting("hide_icon")
+        </script>
+    </div>
+
+</div>
+
+<script src="https://dom.tutorialpaths.com/nav.bundle.js" async></script>

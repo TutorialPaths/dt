@@ -1,0 +1,50 @@
+// Light theme
+
+$mdc-theme-primary: #FF9100;
+$mdc-theme-on-primary: #000000;
+$mdc-theme-secondary: #6200ee;
+$mdc-theme-on-secondary: #FFFFFF;
+$mdc-theme-surface: #FFFFFF;
+$mdc-theme-on-surface: #000000;
+$mdc-theme-background: #FAFCFC;
+$mdc-theme-on-background: #000000;
+
+
+// Dark theme
+/*
+$mdc-theme-primary: #FF9100;
+$mdc-theme-on-primary: #000000;
+$mdc-theme-secondary: #6200ee;
+$mdc-theme-on-secondary: #FFFFFF;
+$mdc-theme-surface: #212121;
+$mdc-theme-on-surface: #FFFFFF;
+$mdc-theme-background: #303030;
+$mdc-theme-on-background: #FFFFFF;
+*/
+
+
+@import "@material/button/mdc-button";
+@import "@material/drawer/mdc-drawer";
+@import "@material/list/mdc-list";
+@import "@material/top-app-bar/mdc-top-app-bar";
+@import "@material/ripple/mdc-ripple";
+@import "@material/icon-button/mdc-icon-button";
+@import "@material/textfield/mdc-text-field";
+@import "@material/typography/mdc-typography";
+@import "@material/checkbox/mdc-checkbox";
+@import "@material/tab-bar/mdc-tab-bar";
+@import "@material/tab-scroller/mdc-tab-scroller";
+@import "@material/tab-indicator/mdc-tab-indicator";
+@import "@material/tab/mdc-tab";
+@import "@material/linear-progress/mdc-linear-progress";
+@import "@material/textfield/helper-text/mdc-text-field-helper-text";
+@import "@material/dialog/mdc-dialog";
+@import "@material/snackbar/mdc-snackbar";
+@import "@material/menu-surface/mdc-menu-surface";
+@import "@material/menu/mdc-menu";
+@import "@material/icon-toggle/mdc-icon-toggle";
+
+body {
+    margin: 0px;
+    overflow: hidden;
+}
