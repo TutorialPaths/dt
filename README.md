@@ -3,7 +3,9 @@ The 'dt' repository stores the main files for the TutorialPaths webpages. This r
 
 ## File Compiling
 The style.scss and script.js files are compiled by webpack locally on a device, and result as follows:
+
 PATH/style.scss -> PATH/bundle.css
+
 PATH/script.js -> PATH.bundle.js
 
 The index.html files are renamed to \_index.html, so that visiting the url on the [dom.tutorialpaths.com](https://dom.tutorialpaths.com) domain will not show a very broken webpage.
