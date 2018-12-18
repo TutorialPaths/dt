@@ -21,6 +21,7 @@
     border-radius: 8px;
     @include mdc-elevation(2);
     padding: 0px 10px;
+    list-style-type: none;
 
     li {
         min-height: 14px;
