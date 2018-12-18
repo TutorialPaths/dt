@@ -1,6 +1,6 @@
 if (md_html) {
 
-    let elms = document.querySelectorAll("h1").concat(document.querySelectorAll("h2"), document.querySelectorAll("h3"), document.querySelectorAll("h4"), document.querySelectorAll("h5"))
+    let elms = Array.prototype.slice.call(document.querySelectorAll("h1")).concat(Array.prototype.slice.call(document.querySelectorAll("h2")), Array.prototype.slice.call(document.querySelectorAll("h3")), Array.prototype.slice.call(document.querySelectorAll("h4")), Array.prototype.slice.call(document.querySelectorAll("h5")))
     for (var i = 0; i < elms.length; i++) {
         let val = elms[i].innerHTML.toLowerCase().split(" ").join("-").split(".").join("")
         elms[i].id = val
