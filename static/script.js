@@ -1,28 +1,27 @@
 if (md_html) {
-    let index = -1
+    let index = -4
     let more = true
 
     while (more) {
-        index = md_html.indexOf("<h", index + 4)
-        if (index == -1) {
+        let newindex = md_html.indexOf("<h", index + 4)
+        if (newindex == -1) {
             more = false
         } else {
+            index = newindex
             let key = md_html.substring(index + 1, index + 3)
             let contents = md_html.substring(md_html.indexOf("<" + key + ">") + 4, md_html.indexOf("</" + key + ">"))
 
-            let num;
+            let val;
             let elms = document.querySelectorAll(key)
             for (var i = 0; i < elms.length; i++) {
-                if (elms[i].innerHTML = contents) {
-                    num = Math.random() * 10000
-                    elms[i].id = num
-                }
+                val = elms[i].innerHTML.toLowerCase().split(" ").join("-").split(".").join("")
+                elms[i].id = val
             }
 
             let elm = document.createElement("li")
             elm.className = key
             elm.innerHTML = contents
-            elm.setAttribute("onclick", "window.location.hash = '#" + num + "'")
+            elm.setAttribute("onclick", "window.location.hash = '#" + val + "'")
 
             document.querySelector(".contents-box").appendChild(elm)
         }

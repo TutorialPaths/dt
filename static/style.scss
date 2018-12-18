@@ -16,6 +16,7 @@ body {
     h6 { @include mdc-typography(headline6); margin: 10px 0px; }
 
     p, em, strong, li { @include mdc-typography(body1); }
+    strong { font-weight: 500; }
 
 }
 
@@ -32,16 +33,16 @@ body {
         min-height: 14px;
         font-size: 14px;
         padding: 4px 2px 2px 2px;
-        color: #149eff;
+        color: #008aea;
         cursor: pointer;
         @include mdc-typography(body2);
 
         &:hover { opacity: 0.4; transition-duration: 0.1s; }
 
-        &.h2 { padding-left: 8px; }
-        &.h3 { padding-left: 12px; }
-        &.h4 { padding-left: 16px; }
-        &.h5 { padding-left: 20px; }
-        &.h6 { padding-left: 24px; }
+        &.h2 { padding-left: 6px; }
+        &.h3 { padding-left: 8px; }
+        &.h4 { padding-left: 12px; }
+        &.h5 { padding-left: 16px; }
+        &.h6 { padding-left: 20px; }
     }
 }
