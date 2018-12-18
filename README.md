@@ -10,6 +10,16 @@ PATH/script.js -> PATH.bundle.js
 
 The index.html files are renamed to \_index.html, so that visiting the url on the [dom.tutorialpaths.com](https://dom.tutorialpaths.com) domain will not show a very broken webpage.
 
+## Notable Folders
+#### branding
+Branding such as assets, images, etc.
+
+#### gl
+Global stuff. Currently contains the html for the common head, and the common style.scss.
+
+#### nav
+Contains html for the navigation setup.
+
 ## GNU LESSER GENERAL PUBLIC LICENSE
 Copyright © 2018, Lachlan Walls
 
