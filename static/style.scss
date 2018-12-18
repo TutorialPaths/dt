@@ -1,7 +1,7 @@
 @import '../gl/style.scss';
 
 body {
-    overflow-y: scroll;
+    overflow-y: scroll !important;
 }
 
 .content-container {
@@ -12,7 +12,7 @@ body {
     h1 { @include mdc-typography(headline1); margin: 20px 0px; }
     h2 { @include mdc-typography(headline2); margin: 30px 0px 20px 0px; }
     h3 { @include mdc-typography(headline3); margin: 30px 0px 20px 0px; }
-    h4 { @include mdc-typography(headline4); margin: 20px 0px 15px 0px; }
+    h4 { @include mdc-typography(headline4); margin: 40px 0px 15px 0px; }
     h5 { @include mdc-typography(headline5); margin: 15px 0px 10px 0px; }
     h6 { @include mdc-typography(headline6); margin: 10px 0px; }
 
