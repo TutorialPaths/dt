@@ -5,8 +5,8 @@ body {
 }
 
 .content-container {
-    width: calc(100vw - 340px);
-    margin: 0px 0px 0px 50px;
+    width: calc(100vw - 360px);
+    margin: 0px 20px 0px 50px;
     display: inline-block;
 
     h1 { @include mdc-typography(headline1); margin: 20px 0px; }
@@ -22,6 +22,7 @@ body {
 }
 
 .contents-box {
+    position: fixed;
     margin: 20px;
     width: calc(220px);
     border-radius: 8px;
