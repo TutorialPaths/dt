@@ -1,0 +1,52 @@
+@import '../gl/style.scss';
+
+body {
+    overflow-y: scroll !important;
+}
+
+.content-container {
+    width: calc(100vw - 360px);
+    margin: 0px 20px 0px 50px;
+    display: inline-block;
+
+    h1 { @include mdc-typography(headline1); margin: 120px 0px; }
+    h2 { @include mdc-typography(headline2); margin: 90px 0px 20px 0px; }
+    h3 { @include mdc-typography(headline3); margin: 80px 0px 20px 0px; }
+    h4 { @include mdc-typography(headline4); margin: 40px 0px 15px 0px; }
+    h5 { @include mdc-typography(headline5); margin: 15px 0px 10px 0px; }
+    h6 { @include mdc-typography(headline6); margin: 10px 0px; }
+
+    p, em, strong, li { @include mdc-typography(body1); }
+    strong { font-weight: 500; }
+
+}
+
+.contents-box {
+    position: fixed;
+    margin: 20px;
+    width: calc(220px);
+    border-radius: 8px;
+    @include mdc-elevation(2);
+    padding: 10px;
+    cursor: pointer;
+    list-style-type: none;
+    display: inline-block;
+    vertical-align: top;
+
+    li {
+        min-height: 14px;
+        font-size: 14px;
+        padding: 4px 2px 2px 2px;
+        color: #008aea;
+        cursor: pointer;
+        @include mdc-typography(body2);
+
+        &:hover { opacity: 0.4; transition-duration: 0.1s; }
+
+        &.h2 { padding-left: 6px; }
+        &.h3 { padding-left: 8px; }
+        &.h4 { padding-left: 12px; }
+        &.h5 { padding-left: 16px; }
+        &.h6 { padding-left: 20px; }
+    }
+}
