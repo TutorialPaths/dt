@@ -1,17 +1,21 @@
 @import '../gl/style.scss';
 
+body {
+    overflow-y: scroll;
+}
+
 .content-container {
     width: calc(100vw - 230px);
-    margin: 50px 50px 0px 0px;
+    margin: 0px 0px 0px 50px;
 
-    h1 { @include mdc-typography(headline1); }
-    h2 { @include mdc-typography(headline2); }
-    h3 { @include mdc-typography(headline3); }
-    h4 { @include mdc-typography(headline4); }
-    h5 { @include mdc-typography(headline5); }
-    h6 { @include mdc-typography(headline6); }
+    h1 { @include mdc-typography(headline1); margin: 20px 0px; }
+    h2 { @include mdc-typography(headline2); margin: 30px 0px 20px 0px; }
+    h3 { @include mdc-typography(headline3); margin: 30px 0px 20px 0px; }
+    h4 { @include mdc-typography(headline4); margin: 20px 0px 15px 0px; }
+    h5 { @include mdc-typography(headline5); margin: 15px 0px 10px 0px; }
+    h6 { @include mdc-typography(headline6); margin: 10px 0px; }
 
-    p { @include mdc-typography(body1); }
+    p, em, strong, li { @include mdc-typography(body1); }
 
 }
 
@@ -20,16 +24,19 @@
     width: calc(220px);
     border-radius: 8px;
     @include mdc-elevation(2);
-    padding: 0px 10px;
+    padding: 10px;
+    cursor: pointer;
     list-style-type: none;
 
     li {
         min-height: 14px;
         font-size: 14px;
-        padding: 8px 2px 8px 2px;
-        color: blue;
+        padding: 4px 2px 2px 2px;
+        color: #149eff;
+        cursor: pointer;
+        @include mdc-typography(body2);
 
-        &:hover { opacity: 0.6; }
+        &:hover { opacity: 0.4; transition-duration: 0.1s; }
 
         &.h2 { padding-left: 8px; }
         &.h3 { padding-left: 12px; }
