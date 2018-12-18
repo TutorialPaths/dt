@@ -1,0 +1,39 @@
+@import '../gl/style.scss';
+
+.content-container {
+    width: calc(100vw - 230px);
+    margin: 50px 50px 0px 0px;
+
+    h1 { @include mdc-typography(headline1); }
+    h2 { @include mdc-typography(headline2); }
+    h3 { @include mdc-typography(headline3); }
+    h4 { @include mdc-typography(headline4); }
+    h5 { @include mdc-typography(headline5); }
+    h6 { @include mdc-typography(headline6); }
+
+    p { @include mdc-typography(body1); }
+
+}
+
+.contents-box {
+    margin: 20px;
+    width: calc(220px);
+    border-radius: 8px;
+    @include mdc-elevation(2);
+    padding: 0px 10px;
+
+    li {
+        min-height: 14px;
+        font-size: 14px;
+        padding: 8px 2px 8px 2px;
+        color: blue;
+
+        &:hover { opacity: 0.6; }
+
+        &.h2 { padding-left: 8px; }
+        &.h3 { padding-left: 12px; }
+        &.h4 { padding-left: 16px; }
+        &.h5 { padding-left: 20px; }
+        &.h6 { padding-left: 24px; }
+    }
+}
