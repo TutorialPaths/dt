@@ -12,7 +12,7 @@ The index.html files are renamed to \_index.html, so that visiting the url on th
 
 ## Notable Folders
 #### branding
-Branding, assets, company logos and stuff etc.
+Branding such as assets, images, etc.
 
 #### gl
 Global stuff. Currently contains the html for the common head, and the common style.scss.
