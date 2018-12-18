@@ -12,6 +12,8 @@ if (md_html) {
     }
 
     document.querySelector(".content-container").innerHTML = md_html
+
+    document.querySelector("#app-bar").className = document.querySelector("#app-bar").className.replace(" app-bar--loading", "")
 } else {
     document.querySelector(".content-container").innerHTML = "<h6>Something went wrong.</h6>"
 }
