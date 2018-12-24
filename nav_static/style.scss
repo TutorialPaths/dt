@@ -6,13 +6,13 @@
 }
 
 #main-content {
-    background-color: $mdc-theme-surface;
+    background-color: white;
 }
 
 body {
   display: flex;
   margin: 0px;
-  background-color: #FFFFFF;
+  background-color: white;
 }
 
 div {
@@ -31,10 +31,10 @@ div {
 }
 
 .app-bar {
-  position: absolute;
+  position: fixed;
   height: 56px;
   background-color: white;
-  border-bottom: 1px solid #D3D3D3;
+  border-bottom: 1px solid rgba(211, 211, 211, 0.4);
 }
 
 .app-bar .mdc-linear-progress {
@@ -59,6 +59,10 @@ div {
     @include mdc-drawer-activated-overlay-color($mdc-theme-secondary);
     @include mdc-drawer-item-activated-text-ink-color($mdc-theme-secondary);
     @include mdc-drawer-item-activated-icon-ink-color($mdc-theme-secondary);
+}
+
+.mdc-top-app-bar__row {
+    height: 54px;
 }
 
 .mdc-top-app-bar__title {

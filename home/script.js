@@ -44,7 +44,6 @@ fetch("https://gateway.tutorialpaths.com/v1/loader/tutorials/best", {
         let tutorials = JSON.parse(res)
 
         if (!tutorials.code) {
-            console.log("yeah sick, tutorials:", tutorials)
             for (var i = 0; i < tutorials.length; i++) {
                 let starturl = tutorials[i].start
                 let previewurl = tutorials[i].url
