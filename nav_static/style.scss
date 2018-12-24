@@ -27,11 +27,9 @@ div {
 .main-content {
   overflow: auto;
   height: 100%;
-  background-color: $mdc-theme-surface;
 }
 
 .app-bar {
-  position: fixed;
   height: 56px;
   background-color: white;
   border-bottom: 1px solid rgba(211, 211, 211, 0.4);
