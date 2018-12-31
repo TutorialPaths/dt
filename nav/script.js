@@ -207,7 +207,7 @@ for (let i = 0; i < document.querySelectorAll(".popup-close").length; i++) {
 function setPageSetting(setting, value) {
     let settings = JSON.parse(tls.cookies.get("tp_ps"))
     if (!settings) {
-        settings = {"fix_nav": false, "hide_icon": false}
+        settings = {"fix_nav": false, "hide_icon": true}
     }
     settings[setting] = value
     tls.cookies.set("tp_ps", JSON.stringify(settings), 1000)

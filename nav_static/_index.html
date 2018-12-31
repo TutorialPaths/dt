@@ -246,7 +246,7 @@
             function getPageSetting(setting) {
                 let settings = JSON.parse(tls.cookies.get("tp_ps"))
                 if (!settings) {
-                    settings = {"fix_nav": false, "hide_icon": false}
+                    settings = {"fix_nav": false, "hide_icon": true}
                     tls.cookies.set("tp_ps", JSON.stringify(settings))
                 }
                 return settings[setting]
