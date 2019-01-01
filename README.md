@@ -10,30 +10,17 @@ PATH/script.js -> PATH.bundle.js
 
 The index.html files are renamed to \_index.html, so that visiting the url on the [dom.tutorialpaths.com](https://dom.tutorialpaths.com) domain will not show a very broken webpage.
 
-## Notable Folders
-#### branding
-Branding such as assets, images, etc.
+## Folders
+Here is a table containing information on all the directories in this project. Note that URLs represent the URLs that the user would visit, directories such as branding which would not be visited by a user do not show a URL.
 
-#### gl
-Global stuff. Currently contains the html for the common head, and the common style.scss.
-
-#### nav
-Contains html for the navigation setup.
-
-## GNU LESSER GENERAL PUBLIC LICENSE
-Copyright © 2018, Lachlan Walls
-
-This file is part of TutorialPaths.
-
-TutorialPaths is a free software: you can redistribute it and/or modify
-it under the terms of the GNU General Public License as published by
-the Free Software Foundation, either version 3 of the License, or
-(at your option) any later version.
-
-TutorialPaths is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-GNU General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with TutorialPaths.  If not, see <https://www.gnu.org/licenses/>.
+Name | URL | Description
+---- | --- | -----------
+auth | /auth | Authentication page
+branding | - | Assets for branding purposes
+gl | - | Other assets and global files
+home | / | Home page
+nav | - | Navigation bar
+nav_static | - | Navigation bar for static pages
+st | - | Markdown files for static pages
+static | - | HTML, CSS & JS files for all static pages
+t | /t/<tutorial> | Tutorial viewer
