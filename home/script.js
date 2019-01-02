@@ -5,6 +5,9 @@ document.querySelector(".notice").style.display = (welcome) ? "":"none"
 
 function updateView(e) {
     let elm = e.path[0]
+    if (elm.tagName == "LI") {
+        elm = elm.querySelector("i")
+    }
     let elms = document.querySelectorAll(".control-box--view li")
     for (var i = 0; i < elms.length; i++) {
         elms[i].className = (elms[i] == elm.parentElement) ? "selected":""

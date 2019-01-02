@@ -1,7 +1,15 @@
 @import '../gl/style.scss';
 
+/* SUPPORT IS NOT YET A WORKING FEATURE */
+h3.support { display: none; }
+
+i.support-icon { display: none; }
+
+div.support-container { display: none; }
+/* TEMPORARILY HIDE ALL SUPPORT UNTIL DONE */
+
+
 .control-container {
-    background-color: transparent;
     position: fixed;
     display: inline-block;
     vertical-align: top;
@@ -33,7 +41,6 @@
 }
 
 ul.control-box {
-    background-color: white;
     width: 50px;
     padding: 8px 0px;
     list-style-type: none;
@@ -78,7 +85,7 @@ ul.control-box li.selected i.control-button {
     width: 100%;
     height: 120px;
     margin-bottom: 10px;
-    border: 1px solid #dadce0;;
+    @include mdc-elevation(1);
     border-radius: 8px;
 }
 
@@ -86,7 +93,7 @@ ul.control-box li.selected i.control-button {
     width: 100%;
     height: 200px;
     margin-bottom: 10px;
-    border: 1px solid #dadce0;;
+    @include mdc-elevation(1);
     border-radius: 8px;
 }
 
@@ -95,7 +102,7 @@ ul.control-box li.selected i.control-button {
     height: 470px;
     margin-bottom: 10px;
     margin-right: 10px;
-    border: 1px solid #dadce0;;
+    @include mdc-elevation(1);
     border-radius: 8px;
     display: inline-block;
 }
@@ -105,7 +112,7 @@ ul.control-box li.selected i.control-button {
     height: 380px;
     margin-bottom: 10px;
     margin-right: 10px;
-    border: 1px solid #dadce0;;
+    @include mdc-elevation(1);
     border-radius: 8px;
     display: inline-block;
 }
@@ -191,7 +198,7 @@ ul.control-box li.selected i.control-button {
         div.rating-container {
             position: absolute;
             bottom: 5px;
-            right: 170px;
+            right: 70px;
             height: 25px;
             width: auto;
 
@@ -212,7 +219,6 @@ ul.control-box li.selected i.control-button {
 
             h5 {
                 display: inline-block;
-                vertical-align: bottom;
                 margin: 0;
                 @include mdc-typography(caption);
             }
@@ -223,7 +229,7 @@ ul.control-box li.selected i.control-button {
             overflow-y: auto;
             overflow-x: hidden;
             white-space: normal;
-            width: calc(100% - 120px);
+            width: calc(100% - 20px);
             @include mdc-typography(body2);
             opacity: 0.7;
         }
@@ -291,7 +297,7 @@ ul.control-box li.selected i.control-button {
         button.share {
             position: absolute;
             bottom: 2px;
-            right: 123px;
+            right: 23px;
             color: $mdc-theme-secondary;
             @include mdc-icon-button-size(25px, 25px, 5px);
         }
@@ -353,14 +359,13 @@ ul.control-box li.selected i.control-button {
 
             h5 {
                 display: inline-block;
-                vertical-align: bottom;
                 margin: 0;
                 @include mdc-typography(caption);
             }
         }
 
         div.description {
-            height: 50px;
+            height: 95px;
             overflow-y: auto;
             width: calc(100% - 100px);
             @include mdc-typography(body2);
@@ -485,7 +490,6 @@ ul.control-box li.selected i.control-button {
 
             h5 {
                 display: inline-block;
-                vertical-align: bottom;
                 margin: 0;
                 @include mdc-typography(caption);
             }
@@ -494,7 +498,7 @@ ul.control-box li.selected i.control-button {
         div.description {
             margin-top: 30px;
             margin-bottom: 5px;
-            height: 70px;
+            height: 120px;
             overflow-y: auto;
             overflow-x: hidden;
             white-space: normal;
@@ -599,8 +603,6 @@ ul.control-box li.selected i.control-button {
             left: 15px;
             @include mdc-typography(subtitle2);
             font-size: 0.7rem;
-            white-space: nowrap;
-            overflow-x: hidden;
         }
 
         div.rating-container {
@@ -624,7 +626,6 @@ ul.control-box li.selected i.control-button {
 
             h5 {
                 display: inline-block;
-                vertical-align: bottom;
                 margin: 0;
                 @include mdc-typography(caption);
             }
