@@ -10,6 +10,7 @@ div.support-container { display: none; }
 
 
 .control-container {
+    background-color: transparent;
     position: fixed;
     display: inline-block;
     vertical-align: top;
@@ -41,6 +42,7 @@ div.support-container { display: none; }
 }
 
 ul.control-box {
+    background-color: white;
     width: 50px;
     padding: 8px 0px;
     list-style-type: none;
@@ -85,7 +87,7 @@ ul.control-box li.selected i.control-button {
     width: 100%;
     height: 120px;
     margin-bottom: 10px;
-    @include mdc-elevation(1);
+    border: 1px solid #dadce0;
     border-radius: 8px;
 }
 
@@ -93,7 +95,7 @@ ul.control-box li.selected i.control-button {
     width: 100%;
     height: 200px;
     margin-bottom: 10px;
-    @include mdc-elevation(1);
+    border: 1px solid #dadce0;
     border-radius: 8px;
 }
 
@@ -102,7 +104,7 @@ ul.control-box li.selected i.control-button {
     height: 470px;
     margin-bottom: 10px;
     margin-right: 10px;
-    @include mdc-elevation(1);
+    border: 1px solid #dadce0;
     border-radius: 8px;
     display: inline-block;
 }
@@ -112,7 +114,7 @@ ul.control-box li.selected i.control-button {
     height: 380px;
     margin-bottom: 10px;
     margin-right: 10px;
-    @include mdc-elevation(1);
+    border: 1px solid #dadce0;
     border-radius: 8px;
     display: inline-block;
 }
@@ -219,6 +221,7 @@ ul.control-box li.selected i.control-button {
 
             h5 {
                 display: inline-block;
+                vertical-align: bottom;
                 margin: 0;
                 @include mdc-typography(caption);
             }
@@ -359,6 +362,7 @@ ul.control-box li.selected i.control-button {
 
             h5 {
                 display: inline-block;
+                vertical-align: bottom;
                 margin: 0;
                 @include mdc-typography(caption);
             }
@@ -490,6 +494,7 @@ ul.control-box li.selected i.control-button {
 
             h5 {
                 display: inline-block;
+                vertical-align: bottom;
                 margin: 0;
                 @include mdc-typography(caption);
             }
@@ -603,6 +608,8 @@ ul.control-box li.selected i.control-button {
             left: 15px;
             @include mdc-typography(subtitle2);
             font-size: 0.7rem;
+            white-space: nowrap;
+            overflow-x: hidden;
         }
 
         div.rating-container {
@@ -626,6 +633,7 @@ ul.control-box li.selected i.control-button {
 
             h5 {
                 display: inline-block;
+                vertical-align: bottom;
                 margin: 0;
                 @include mdc-typography(caption);
             }
