@@ -1,5 +1,13 @@
 @import '../gl/components.scss';
 
+html {
+    @import '../gl/light.scss'
+}
+
+html[dark] {
+    @import '../gl/dark.scss'
+}
+
 body {
     overflow-y: auto !important;
 }

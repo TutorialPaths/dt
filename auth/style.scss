@@ -1,5 +1,13 @@
 @import '../gl/components.scss';
 
+html {
+    @import '../gl/light.scss';
+}
+
+html[dark] {
+    @import '../gl/dark.scss';
+}
+
 body {
     background-image: url(https://dom.tutorialpaths.com/branding/auth-background.png);
     background-size: cover;
