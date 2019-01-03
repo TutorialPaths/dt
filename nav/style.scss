@@ -166,6 +166,7 @@ div {
     margin-left: 8px;
     transition-duration: 0.1s;
     width: 30px;
+    @include mdc-text-field-focused-outline-color($mdc-theme-primary);
 }
 
 .app-bar__search.showing {
@@ -241,4 +242,16 @@ div {
 
 .mdc-top-app-bar__title img {
     height: 42px;
+}
+
+.mdc-checkbox.mdc-list-item__meta {
+    @include mdc-checkbox-ink-color($mdc-theme-primary)
+}
+
+.mdc-list-item__secondary-text {
+    color: #7F7F7F;
+}
+
+.mdc-button .mdc-button__icon {
+    color: $mdc-theme-secondary;
 }
