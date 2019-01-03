@@ -23,7 +23,7 @@
     $mdc-theme-on-background: #FFFFFF !global;
     $mdc-theme--primary-bg: #232323 !global;
     $mdc-theme--secondary-bg: #232323 !global;
-    $mdc-theme-outline: #282828 !global;
+    $mdc-theme-outline: #333333 !global;
 }
 
 @import "@material/button/mdc-button";
@@ -50,4 +50,8 @@
 body {
     margin: 0px;
     overflow: hidden;
+}
+
+* {
+    color: $mdc-theme-on-surface;
 }

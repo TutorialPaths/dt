@@ -8,13 +8,13 @@
 }
 
 #main-content {
-    background-color: white;
+    background-color: $mdc-theme-background;
 }
 
 body {
   display: flex;
   margin: 0px;
-  background-color: white;
+  background-color: $mdc-theme-background;
 }
 
 div {
@@ -29,12 +29,14 @@ div {
 .main-content {
   overflow: auto;
   height: 100%;
+  background-color: $mdc-theme-surface;
 }
 
 .app-bar {
   height: 56px;
   background-color: white;
-  border-bottom: 1px solid rgba(211, 211, 211, 0.4);
+  background-color: $mdc-theme-surface;
+  border-bottom: 1px solid $mdc-theme-outline;
 }
 
 .app-bar .mdc-linear-progress {
