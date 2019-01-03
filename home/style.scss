@@ -63,11 +63,11 @@ i.control-button {
 }
 
 ul.control-box li:hover {
-    background-color: transparentize($mdc-theme-on-surface, .96);
+    background-color: transparentize($mdc-theme-on-surface, .98);
 }
 
 ul.control-box li.selected {
-    background-color: transparentize($mdc-theme-on-surface, .90);
+    background-color: transparentize($mdc-theme-on-surface, .95);
 }
 
 ul.control-box li.selected i.control-button {
