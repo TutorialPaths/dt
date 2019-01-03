@@ -1,11 +1,11 @@
-@import '../gl/components.scss';
+@import '../gl/global.scss';
 
 html {
-    @import '../gl/light.scss'
+    @include light;
 }
 
 html[dark] {
-    @import '../gl/dark.scss'
+    @include dark;
 }
 
 .mdc-list-item--partial,
