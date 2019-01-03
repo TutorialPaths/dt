@@ -288,11 +288,11 @@ ul.control-box li.selected i.control-button {
                 @include mdc-button-ink-color($mdc-theme-secondary);
                 height: 30px;
 
-                &::before { background-color: lighten($mdc-theme-secondary, 60); }
-                &::after { background-color: lighten($mdc-theme-secondary, 60); }
+                &::before { background-color: transparentize($mdc-theme-secondary, .60); }
+                &::after { background-color: transparentize($mdc-theme-secondary, .60); }
 
                 &:hover {
-                    background-color: lighten($mdc-theme-secondary, 80);
+                    background-color: transparentize($mdc-theme-secondary, .80);
                 }
             }
         }
@@ -424,11 +424,11 @@ ul.control-box li.selected i.control-button {
                 @include mdc-button-ink-color($mdc-theme-secondary);
                 height: 30px;
 
-                &::before { background-color: lighten($mdc-theme-secondary, 60); }
-                &::after { background-color: lighten($mdc-theme-secondary, 60); }
+                &::before { background-color: transparentize($mdc-theme-secondary, .60); }
+                &::after { background-color: transparentize($mdc-theme-secondary, .60); }
 
                 &:hover {
-                    background-color: lighten($mdc-theme-secondary, 80);
+                    background-color: transparentize($mdc-theme-secondary, .80);
                 }
             }
         }
@@ -561,11 +561,11 @@ ul.control-box li.selected i.control-button {
                 @include mdc-button-ink-color($mdc-theme-secondary);
                 height: 30px;
 
-                &::before { background-color: lighten($mdc-theme-secondary, 60); }
-                &::after { background-color: lighten($mdc-theme-secondary, 60); }
+                &::before { background-color: transparentize($mdc-theme-secondary, .60); }
+                &::after { background-color: transparentize($mdc-theme-secondary, .60); }
 
                 &:hover {
-                    background-color: lighten($mdc-theme-secondary, 80);
+                    background-color: transparentize($mdc-theme-secondary, .80);
                 }
             }
         }
