@@ -1,12 +1,12 @@
 // Dark theme
 
-$mdc-theme-primary: #FF9100;
-$mdc-theme-on-primary: #000000;
-$mdc-theme-secondary: #6200ee;
-$mdc-theme-on-secondary: #FFFFFF;
-$mdc-theme-surface: #212121;
-$mdc-theme-on-surface: #FFFFFF;
-$mdc-theme-background: #303030;
-$mdc-theme-on-background: #FFFFFF;
-$mdc-theme--primary-bg: #000000;
-$mdc-theme--secondary-bg: #000000;
+$mdc-theme-primary: #FF9100 !global;
+$mdc-theme-on-primary: #000000 !global;
+$mdc-theme-secondary: #6200ee !global;
+$mdc-theme-on-secondary: #FFFFFF !global;
+$mdc-theme-surface: #212121 !global;
+$mdc-theme-on-surface: #FFFFFF !global;
+$mdc-theme-background: #303030 !global;
+$mdc-theme-on-background: #FFFFFF !global;
+$mdc-theme--primary-bg: #000000 !global;
+$mdc-theme--secondary-bg: #000000 !global;

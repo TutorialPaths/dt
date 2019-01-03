@@ -1,13 +1,5 @@
 @import '../gl/components.scss';
 
-html {
-    @import '../gl/light.scss'
-}
-
-html[dark] {
-    @import '../gl/dark.scss'
-}
-
 .content-container {
     background-color: transparent;
     display: inline-block;
