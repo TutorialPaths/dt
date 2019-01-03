@@ -2,11 +2,6 @@
 
 @include dark;
 
-.mdc-list-item--partial,
-.mdc-list-item--partial i {
-    color: rgba(98, 0, 238, 0.87) !important;
-}
-
 #main-content {
     background-color: $mdc-theme-background;
 }
@@ -61,6 +56,12 @@ div {
     @include mdc-drawer-activated-overlay-color($mdc-theme-secondary);
     @include mdc-drawer-item-activated-text-ink-color($mdc-theme-secondary);
     @include mdc-drawer-item-activated-icon-ink-color($mdc-theme-secondary);
+    border-color: $mdc-theme-outline;
+}
+
+.mdc-list-group__subheader,
+.mdc-list-item__graphic {
+    color: $mdc-theme-on-surface;
 }
 
 .mdc-top-app-bar__row {
@@ -116,7 +117,6 @@ div {
     width: calc(100% - 40px);
     height: calc(100% - 40px);
     padding: 20px;
-    background-color: transparent;
 }
 
 .popup-close {

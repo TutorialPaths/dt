@@ -71,7 +71,7 @@ ul.control-box li.selected {
 }
 
 ul.control-box li.selected i.control-button {
-    color: darken($mdc-theme-secondary, 10);
+    color: transparentize($mdc-theme-secondary, 0.4);
 }
 
 .content-container .content {

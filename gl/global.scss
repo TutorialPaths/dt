@@ -10,6 +10,8 @@
     $mdc-theme--primary-bg: #FFFFFF !global;
     $mdc-theme--secondary-bg: #FFFFFF !global;
     $mdc-theme-outline: #FEFEFE !global;
+    $mdc-theme-text-secondary-on-background: #7F7F7F !global;
+    $mdc-theme-text-icon-on-background: #000000 !global;
 
     * { color: $mdc-theme-on-surface; }
 }
@@ -26,6 +28,8 @@
     $mdc-theme--primary-bg: #232323 !global;
     $mdc-theme--secondary-bg: #232323 !global;
     $mdc-theme-outline: #333333 !global;
+    $mdc-theme-text-secondary-on-background: #7F7F7F !global;
+    $mdc-theme-text-icon-on-background: #FFFFFF !global;
 
     * { color: $mdc-theme-on-surface; }
 }
