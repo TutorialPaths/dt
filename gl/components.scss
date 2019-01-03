@@ -1,28 +1,3 @@
-// Light theme
-
-$mdc-theme-primary: #FF9100;
-$mdc-theme-on-primary: #000000;
-$mdc-theme-secondary: #6200ee;
-$mdc-theme-on-secondary: #FFFFFF;
-$mdc-theme-surface: #FFFFFF;
-$mdc-theme-on-surface: #000000;
-$mdc-theme-background: #FAFCFC;
-$mdc-theme-on-background: #000000;
-
-
-// Dark theme
-/*
-$mdc-theme-primary: #FF9100;
-$mdc-theme-on-primary: #000000;
-$mdc-theme-secondary: #6200ee;
-$mdc-theme-on-secondary: #FFFFFF;
-$mdc-theme-surface: #212121;
-$mdc-theme-on-surface: #FFFFFF;
-$mdc-theme-background: #303030;
-$mdc-theme-on-background: #FFFFFF;
-*/
-
-
 @import "@material/button/mdc-button";
 @import "@material/drawer/mdc-drawer";
 @import "@material/list/mdc-list";

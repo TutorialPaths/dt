@@ -1,4 +1,12 @@
-@import '../gl/style.scss';
+@import '../gl/components.scss';
+
+html {
+    @import '../gl/light.scss'
+}
+
+html[dark] {
+    @import '../gl/dark.scss'
+}
 
 .mdc-list-item--partial,
 .mdc-list-item--partial i {
