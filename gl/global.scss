@@ -13,15 +13,15 @@
 
 @mixin dark {
     $mdc-theme-primary: #FF9100 !global;
-    $mdc-theme-on-primary: #000000 !global;
+    $mdc-theme-on-primary: #FFFFFF !global;
     $mdc-theme-secondary: #6200ee !global;
     $mdc-theme-on-secondary: #FFFFFF !global;
-    $mdc-theme-surface: #212121 !global;
+    $mdc-theme-surface: #232323 !global;
     $mdc-theme-on-surface: #FFFFFF !global;
-    $mdc-theme-background: #303030 !global;
+    $mdc-theme-background: #121212 !global;
     $mdc-theme-on-background: #FFFFFF !global;
-    $mdc-theme--primary-bg: #000000 !global;
-    $mdc-theme--secondary-bg: #000000 !global;
+    $mdc-theme--primary-bg: #232323 !global;
+    $mdc-theme--secondary-bg: #232323 !global;
 }
 
 @import "@material/button/mdc-button";

@@ -1,16 +1,6 @@
 @import '../gl/global.scss';
 
-$theme: "light";
-
-html[dark] {
-    $theme: "dark" !global;
-}
-
-@if $theme == "light" {
-    @include light;
-} @else {
-    @include dark;
-}
+@include dark;
 
 .mdc-list-item--partial,
 .mdc-list-item--partial i {
