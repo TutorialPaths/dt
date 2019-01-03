@@ -1,5 +1,7 @@
 @import '../gl/global.scss';
 
+@include dark;
+
 /* SUPPORT IS NOT YET A WORKING FEATURE */
 h3.support { display: none; }
 
@@ -58,7 +60,7 @@ ul.control-box li {
 }
 
 i.control-button {
-    color: #6C13EE;
+    color: $mdc-theme-secondary;
 }
 
 ul.control-box li:hover {
@@ -70,12 +72,12 @@ ul.control-box li.selected {
 }
 
 ul.control-box li.selected i.control-button {
-    color: #5000C3;
+    color: darken($mdc-theme-secondary, 10);
 }
 
 .content-container .content {
     position: relative;
-    background-color: #FFFFFF;
+    background-color: $mdc-theme-surface;
 }
 
 .content-container .content .container {
@@ -87,7 +89,7 @@ ul.control-box li.selected i.control-button {
     width: 100%;
     height: 120px;
     margin-bottom: 10px;
-    border: 1px solid #dadce0;
+    border: 1px solid $mdc-theme-outline;
     border-radius: 8px;
 }
 
@@ -95,7 +97,7 @@ ul.control-box li.selected i.control-button {
     width: 100%;
     height: 200px;
     margin-bottom: 10px;
-    border: 1px solid #dadce0;
+    border: 1px solid $mdc-theme-outline;
     border-radius: 8px;
 }
 
@@ -104,7 +106,7 @@ ul.control-box li.selected i.control-button {
     height: 470px;
     margin-bottom: 10px;
     margin-right: 10px;
-    border: 1px solid #dadce0;
+    border: 1px solid $mdc-theme-outline;
     border-radius: 8px;
     display: inline-block;
 }
@@ -114,7 +116,7 @@ ul.control-box li.selected i.control-button {
     height: 380px;
     margin-bottom: 10px;
     margin-right: 10px;
-    border: 1px solid #dadce0;
+    border: 1px solid $mdc-theme-outline;
     border-radius: 8px;
     display: inline-block;
 }
@@ -211,11 +213,11 @@ ul.control-box li.selected i.control-button {
 
                 i {
                     display: inline-block;
-                    color: #FF9100;
+                    color: $mdc-theme-primary;
                     width: 12px;
                     font-size: 12px;
-                    &.half { color: #FFC375; }
-                    &.none { color: #FFF1E0; }
+                    &.half { color: lighten($mdc-theme-primary, 40); }
+                    &.none { color: lighten($mdc-theme-primary, 80); }
                 }
             }
 
@@ -235,6 +237,7 @@ ul.control-box li.selected i.control-button {
             width: calc(100% - 20px);
             @include mdc-typography(body2);
             opacity: 0.7;
+            background-color: transparent;
         }
 
         h3.support { display: none; }
@@ -270,8 +273,8 @@ ul.control-box li.selected i.control-button {
                 font-size: 0.8rem;
 
                 &.highlighted {
-                    background-color: #D7C5FA;
-                    color: #6100ED;
+                    background-color: lighten($mdc-theme-secondary, 20);
+                    color: $mdc-theme-secondary;
                 }
             }
         }
@@ -286,11 +289,11 @@ ul.control-box li.selected i.control-button {
                 @include mdc-button-ink-color($mdc-theme-secondary);
                 height: 30px;
 
-                &::before { background-color: #6200EE44; }
-                &::after { background-color: #6200EE44; }
+                &::before { background-color: lighten($mdc-theme-secondary, 60); }
+                &::after { background-color: lighten($mdc-theme-secondary, 60); }
 
                 &:hover {
-                    background-color: #6200EE22;
+                    background-color: lighten($mdc-theme-secondary, 80);
                 }
             }
         }
@@ -352,11 +355,11 @@ ul.control-box li.selected i.control-button {
 
                 i {
                     display: inline-block;
-                    color: #FF9100;
+                    color: $mdc-theme-primary;
                     width: 12px;
                     font-size: 12px;
-                    &.half { color: #FFC375; }
-                    &.none { color: #FFF1E0; }
+                    &.half { color: lighten($mdc-theme-primary, 40); }
+                    &.none { color: lighten($mdc-theme-primary, 80); }
                 }
             }
 
@@ -374,6 +377,7 @@ ul.control-box li.selected i.control-button {
             width: calc(100% - 100px);
             @include mdc-typography(body2);
             opacity: 0.7;
+            background-color: transparent;
         }
 
         h3.support { display: none; }
@@ -405,8 +409,8 @@ ul.control-box li.selected i.control-button {
                 width: max-content;
 
                 &.highlighted {
-                    background-color: #D7C5FA;
-                    color: #6100ED;
+                    background-color: lighten($mdc-theme-secondary, 20);
+                    color: $mdc-theme-secondary;
                 }
             }
         }
@@ -421,11 +425,11 @@ ul.control-box li.selected i.control-button {
                 @include mdc-button-ink-color($mdc-theme-secondary);
                 height: 30px;
 
-                &::before { background-color: #6200EE44; }
-                &::after { background-color: #6200EE44; }
+                &::before { background-color: lighten($mdc-theme-secondary, 60); }
+                &::after { background-color: lighten($mdc-theme-secondary, 60); }
 
                 &:hover {
-                    background-color: #6200EE22;
+                    background-color: lighten($mdc-theme-secondary, 80);
                 }
             }
         }
@@ -484,11 +488,11 @@ ul.control-box li.selected i.control-button {
 
                 i {
                     display: inline-block;
-                    color: #FF9100;
+                    color: $mdc-theme-primary;
                     width: 12px;
                     font-size: 12px;
-                    &.half { color: #FFC375; }
-                    &.none { color: #FFF1E0; }
+                    &.half { color: lighten($mdc-theme-primary, 40); }
+                    &.none { color: lighten($mdc-theme-primary, 80); }
                 }
             }
 
@@ -510,6 +514,7 @@ ul.control-box li.selected i.control-button {
             width: calc(100% - 30px);
             @include mdc-typography(body2);
             opacity: 0.7;
+            background-color: transparent;
         }
 
         h3.support { display: none; }
@@ -541,8 +546,8 @@ ul.control-box li.selected i.control-button {
                 width: max-content;
 
                 &.highlighted {
-                    background-color: #D7C5FA;
-                    color: #6100ED;
+                    background-color: lighten($mdc-theme-secondary, 20);
+                    color: $mdc-theme-secondary;
                 }
             }
         }
@@ -557,11 +562,11 @@ ul.control-box li.selected i.control-button {
                 @include mdc-button-ink-color($mdc-theme-secondary);
                 height: 30px;
 
-                &::before { background-color: #6200EE44; }
-                &::after { background-color: #6200EE44; }
+                &::before { background-color: lighten($mdc-theme-secondary, 60); }
+                &::after { background-color: lighten($mdc-theme-secondary, 60); }
 
                 &:hover {
-                    background-color: #6200EE22;
+                    background-color: lighten($mdc-theme-secondary, 80);
                 }
             }
         }
@@ -623,11 +628,11 @@ ul.control-box li.selected i.control-button {
 
                 i {
                     display: inline-block;
-                    color: #FF9100;
+                    color: $mdc-theme-primary;
                     width: 12px;
                     font-size: 12px;
-                    &.half { color: #FFC375; }
-                    &.none { color: #FFF1E0; }
+                    &.half { color: lighten($mdc-theme-primary, 40); }
+                    &.none { color: lighten($mdc-theme-primary, 80); }
                 }
             }
 
@@ -649,6 +654,7 @@ ul.control-box li.selected i.control-button {
             width: calc(100% - 30px);
             @include mdc-typography(body2);
             opacity: 0.7;
+            background-color: transparent;
         }
 
         h3.support { display: none; }
