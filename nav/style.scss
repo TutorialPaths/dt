@@ -61,7 +61,7 @@ div {
 
 .mdc-list-group__subheader,
 .mdc-list-item__graphic {
-    color: $mdc-theme-on-surface;
+    color: #7F7F7F !important;
 }
 
 .mdc-top-app-bar__row {
@@ -222,6 +222,10 @@ div {
     max-height: 300px;
     height: auto;
     width: 100%;
+}
+
+#popup__support div table tbody td .content ul {
+    color: $mdc-theme-on-surface;
 }
 
 #popup__support div table tbody td .content ul li {
