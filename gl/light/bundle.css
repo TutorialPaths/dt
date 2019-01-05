@@ -1,17 +1,1 @@
 *{color:#000}
-
-:root {
-    --mdc-theme-primary: #FF9100;
-    --mdc-theme-on-primary: #000000;
-    --mdc-theme-secondary: #6200ee;
-    --mdc-theme-on-secondary: #FFFFFF;
-    --mdc-theme-surface: #FFFFFF;
-    --mdc-theme-on-surface: #000000;
-    --mdc-theme-background: #FAFCFC;
-    --mdc-theme-on-background: #000000;
-    --mdc-theme--primary-bg: #FFFFFF;
-    --mdc-theme--secondary-bg: #FFFFFF;
-    --mdc-theme-outline: #FEFEFE;
-    --mdc-theme-text-secondary-on-background: #7F7F7F;
-    --mdc-theme-text-icon-on-background: #000000;
-}
