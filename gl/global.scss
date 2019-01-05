@@ -8,43 +8,25 @@ html {
     $mdc-theme-on-surface: #000000 !global;
     $mdc-theme-background: #FAFCFC !global;
     $mdc-theme-on-background: #000000 !global;
-    $mdc-theme--primary-bg: #FFFFFF !global;
-    $mdc-theme--secondary-bg: #FFFFFF !global;
     $mdc-theme-outline: #FEFEFE !global;
     $mdc-theme-text-secondary-on-background: #7F7F7F !global;
     $mdc-theme-text-icon-on-background: #000000 !global;
-
-    --mdc-theme-primary: #FF9100;
-    --mdc-theme-on-primary: #000000;
-    --mdc-theme-secondary: #6200ee;
-    --mdc-theme-on-secondary: #FFFFFF;
-    --mdc-theme-surface: #FFFFFF;
-    --mdc-theme-on-surface: #000000;
-    --mdc-theme-background: #FAFCFC;
-    --mdc-theme-on-background: #000000;
-    --mdc-theme--primary-bg: #FFFFFF;
-    --mdc-theme--secondary-bg: #FFFFFF;
-    --mdc-theme-outline: #FEFEFE;
-    --mdc-theme-text-secondary-on-background: #7F7F7F;
-    --mdc-theme-text-icon-on-background: #000000;
 
     * { color: $mdc-theme-on-surface; }
 }
 
 html[dark] {
-    --mdc-theme-primary: #d97700;
-    --mdc-theme-on-primary: #FFFFFF;
-    --mdc-theme-secondary: #3b0091;
-    --mdc-theme-on-secondary: #FFFFFF;
-    --mdc-theme-surface: #232323;
-    --mdc-theme-on-surface: #FFFFFF;
-    --mdc-theme-background: #121212;
-    --mdc-theme-on-background: #FFFFFF;
-    --mdc-theme--primary-bg: #232323;
-    --mdc-theme--secondary-bg: #232323;
-    --mdc-theme-outline: #333333;
-    --mdc-theme-text-secondary-on-background: #7F7F7F;
-    --mdc-theme-text-icon-on-background: #FFFFFF;
+    $mdc-theme-primary: #d97700 !global !default;
+    $mdc-theme-on-primary: #FFFFFF !global !default;
+    $mdc-theme-secondary: #3b0091 !global !default;
+
+    $mdc-theme-surface: #232323 !global !default;
+    $mdc-theme-on-surface: #FFFFFF !global !default;
+    $mdc-theme-background: #121212 !global !default;
+    $mdc-theme-on-background: #FFFFFF !global !default;
+    $mdc-theme-outline: #333333 !global !default;
+
+    $mdc-theme-text-icon-on-background: #FFFFFF !global !default;
 }
 
 
