@@ -1,0 +1,15 @@
+$mdc-theme-primary: #d97700 !global;
+$mdc-theme-on-primary: #FFFFFF !global;
+$mdc-theme-secondary: #3b0091 !global;
+$mdc-theme-on-secondary: #FFFFFF !global;
+$mdc-theme-surface: #232323 !global;
+$mdc-theme-on-surface: #FFFFFF !global;
+$mdc-theme-background: #121212 !global;
+$mdc-theme-on-background: #FFFFFF !global;
+$mdc-theme--primary-bg: #232323 !global;
+$mdc-theme--secondary-bg: #232323 !global;
+$mdc-theme-outline: #333333 !global;
+$mdc-theme-text-secondary-on-background: #7F7F7F !global;
+$mdc-theme-text-icon-on-background: #FFFFFF !global;
+
+* { color: $mdc-theme-on-surface; }
