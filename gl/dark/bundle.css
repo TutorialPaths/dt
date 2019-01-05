@@ -1,15 +1,17 @@
 *{color:#fff}
 
---mdc-theme-primary: #d97700;
---mdc-theme-on-primary: #FFFFFF;
---mdc-theme-secondary: #3b0091;
---mdc-theme-on-secondary: #FFFFFF;
---mdc-theme-surface: #232323;
---mdc-theme-on-surface: #FFFFFF;
---mdc-theme-background: #121212;
---mdc-theme-on-background: #FFFFFF;
---mdc-theme--primary-bg: #232323;
---mdc-theme--secondary-bg: #232323;
---mdc-theme-outline: #333333;
---mdc-theme-text-secondary-on-background: #7F7F7F;
---mdc-theme-text-icon-on-background: #FFFFFF;
+:root {
+    --mdc-theme-primary: #d97700;
+    --mdc-theme-on-primary: #FFFFFF;
+    --mdc-theme-secondary: #3b0091;
+    --mdc-theme-on-secondary: #FFFFFF;
+    --mdc-theme-surface: #232323;
+    --mdc-theme-on-surface: #FFFFFF;
+    --mdc-theme-background: #121212;
+    --mdc-theme-on-background: #FFFFFF;
+    --mdc-theme--primary-bg: #232323;
+    --mdc-theme--secondary-bg: #232323;
+    --mdc-theme-outline: #333333;
+    --mdc-theme-text-secondary-on-background: #7F7F7F;
+    --mdc-theme-text-icon-on-background: #FFFFFF;
+}
