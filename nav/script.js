@@ -4,6 +4,12 @@ import {MDCTopAppBar} from "@material/top-app-bar";
 import {MDCTextField} from '@material/textfield';
 import {MDCCheckbox} from '@material/checkbox';
 
+//jQuery imported in the following, which works the same as "<script src="//code.jquery.com/jquery-x.xx.x.min.js"></script>".
+var jQscript = document.createElement('jQscript');
+ 
+jQscript.src = '//code.jquery.com/jquery-1.11.0.min.js';
+document.getElementsByTagName('head')[0].appendChild(jQscript); 
+
 void(new MDCCheckbox(document.querySelector('.mdc-checkbox')))
 
 var drawer = MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
@@ -244,4 +250,12 @@ document.querySelector("#ps_hide_icon").onclick = function() {
 
 window.addEventListener("beforeunload", function (event) {
     document.querySelector(".app-bar").className += " app-bar--loading"
+})
+
+//Integrates a dark mode and switch based off of IDs.
+$(document).ready(function(){
+    $('.toggle').click(function(){
+    $('.toggle').toggleClass('active')
+    $('body').toggleClass('night')
+    })
 })
