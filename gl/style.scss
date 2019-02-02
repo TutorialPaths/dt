@@ -1,27 +1,31 @@
-// Light theme
+html {
+    --mdc-theme-primary: #FF9100;
+    --mdc-theme-on-primary: #000000;
+    --mdc-theme-secondary: #6200ee;
+    --mdc-theme-on-secondary: #FFFFFF;
+    --mdc-theme-surface: #FFFFFF;
+    --mdc-theme-on-surface: #000000;
+    --mdc-theme-background: #FAFCFC;
+    --mdc-theme-on-background: #000000;
+    --mdc-theme-outline: #FEFEFE;
+    --mdc-theme-text-secondary-on-background: #7F7F7F;
+    --mdc-theme-text-icon-on-background: #000000;
+    * {
+        color: var(--mdc-theme-on-surface);
+    }
+}
 
-$mdc-theme-primary: #FF9100;
-$mdc-theme-on-primary: #000000;
-$mdc-theme-secondary: #6200ee;
-$mdc-theme-on-secondary: #FFFFFF;
-$mdc-theme-surface: #FFFFFF;
-$mdc-theme-on-surface: #000000;
-$mdc-theme-background: #FAFCFC;
-$mdc-theme-on-background: #000000;
-
-
-// Dark theme
-/*
-$mdc-theme-primary: #FF9100;
-$mdc-theme-on-primary: #000000;
-$mdc-theme-secondary: #6200ee;
-$mdc-theme-on-secondary: #FFFFFF;
-$mdc-theme-surface: #212121;
-$mdc-theme-on-surface: #FFFFFF;
-$mdc-theme-background: #303030;
-$mdc-theme-on-background: #FFFFFF;
-*/
-
+html[dark] {
+    --mdc-theme-primary: #d97700;
+    --mdc-theme-on-primary: #FFFFFF;
+    --mdc-theme-secondary: #3b0091;
+    --mdc-theme-surface: #232323;
+    --mdc-theme-on-surface: #FFFFFF;
+    --mdc-theme-background: #121212;
+    --mdc-theme-on-background: #FFFFFF;
+    --mdc-theme-outline: #333333;
+    --mdc-theme-text-icon-on-background: #FFFFFF;
+}
 
 @import "@material/button/mdc-button";
 @import "@material/drawer/mdc-drawer";
@@ -43,7 +47,6 @@ $mdc-theme-on-background: #FFFFFF;
 @import "@material/menu-surface/mdc-menu-surface";
 @import "@material/menu/mdc-menu";
 @import "@material/icon-toggle/mdc-icon-toggle";
-
 body {
     margin: 0px;
     overflow: hidden;
