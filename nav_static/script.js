@@ -1,8 +1,8 @@
-import {MDCRipple} from "@material/ripple";
-import {MDCDrawer} from "@material/drawer";
-import {MDCTopAppBar} from "@material/top-app-bar";
-import {MDCTextField} from '@material/textfield';
-import {MDCCheckbox} from '@material/checkbox';
+import { MDCRipple } from "@material/ripple";
+import { MDCDrawer } from "@material/drawer";
+import { MDCTopAppBar } from "@material/top-app-bar";
+import { MDCTextField } from '@material/textfield';
+import { MDCCheckbox } from '@material/checkbox';
 
 void(new MDCCheckbox(document.querySelector('.mdc-checkbox')))
 
@@ -87,18 +87,18 @@ function popup(state, id) {
     }
     let elms = document.querySelectorAll(".popup")
     for (let i = 0; i < elms.length; i++) {
-        elms[i].className = elms[i].className.replace(" showing", "") + ((elms[i].id.split("popup__")[1] == id && state) ? " showing":"")
-        elms[i].style.display = ((elms[i].id.split("popup__")[1] == id && state) ? "block":"none")
+        elms[i].className = elms[i].className.replace(" showing", "") + ((elms[i].id.split("popup__")[1] == id && state) ? " showing" : "")
+        elms[i].style.display = ((elms[i].id.split("popup__")[1] == id && state) ? "block" : "none")
     }
-    document.querySelector(".main-overlay").className = document.querySelector(".main-overlay").className.replace(" showing", "") + ((state) ? " showing":"")
+    document.querySelector(".main-overlay").className = document.querySelector(".main-overlay").className.replace(" showing", "") + ((state) ? " showing" : "")
     if (state) {
-        if (window.innerWidth - ((drawer.open) ? 256:0) < document.querySelector("#popup__" + id).offsetWidth + 50) {
-            document.querySelector("#popup__" + id).style.width = window.innerWidth - ((drawer.open) ? 256:0) - 50 + "px"
+        if (window.innerWidth - ((drawer.open) ? 256 : 0) < document.querySelector("#popup__" + id).offsetWidth + 50) {
+            document.querySelector("#popup__" + id).style.width = window.innerWidth - ((drawer.open) ? 256 : 0) - 50 + "px"
         } else {
             document.querySelector("#popup__" + id).style.width = document.querySelector("#popup__" + id).getAttribute("def_width")
         }
 
-        document.querySelector("#popup__" + id).style.left = (window.innerWidth - ((drawer.open) ? 256:0)) / 2 - (document.querySelector("#popup__" + id).offsetWidth / 2) + "px"
+        document.querySelector("#popup__" + id).style.left = (window.innerWidth - ((drawer.open) ? 256 : 0)) / 2 - (document.querySelector("#popup__" + id).offsetWidth / 2) + "px"
     }
     if (id == "search") {
         document.querySelector("#search-input").focus()
@@ -134,12 +134,13 @@ window.onkeydown = function(e) {
 }
 
 let hides_drawer_icon = false
+
 function setBarIcons(state) {
-    let sts = [(state) ? "hidden":"showing", (state) ? "showing":"hidden"]
+    let sts = [(state) ? "hidden" : "showing", (state) ? "showing" : "hidden"]
     document.querySelector(".app-bar__icons").className = document.querySelector(".app-bar__icons").className.replace(sts[0], "temp")
     document.querySelector(".app-bar__icons").className = document.querySelector(".app-bar__icons").className.replace("temp", sts[1])
     if (hides_drawer_icon) {
-        document.querySelector(".app-drawer__toggle").className = document.querySelector(".app-drawer__toggle").className.replace((state) ? "showing":"hidden", (state) ? "hidden":"showing")
+        document.querySelector(".app-drawer__toggle").className = document.querySelector(".app-drawer__toggle").className.replace((state) ? "showing" : "hidden", (state) ? "hidden" : "showing")
     }
 }
 
@@ -148,7 +149,7 @@ for (let i = 0; i < document.querySelectorAll(".mdc-text-field").length; i++) {
 }
 
 function setSearchBar(state) {
-    let sts = [(state) ? "hidden":"showing", (state) ? "showing":"hidden"]
+    let sts = [(state) ? "hidden" : "showing", (state) ? "showing" : "hidden"]
     document.querySelector(".app-bar__search").style.opacity = 0
     document.querySelector(".app-bar__search").className = document.querySelector(".app-bar__search").className.replace(sts[0], "temp")
     window.setTimeout(function() {
@@ -163,7 +164,7 @@ function setSearchBar(state) {
 }
 
 function getSearchBarState() {
-    return (document.querySelector(".app-bar__search").className.indexOf("showing") > -1) ? true:false
+    return (document.querySelector(".app-bar__search").className.indexOf("showing") > -1) ? true : false
 }
 
 document.querySelector(".app-bar__button--search").onclick = function() {
@@ -195,28 +196,37 @@ for (let i = 0; i < document.querySelectorAll(".popup-close").length; i++) {
 function setPageSetting(setting, value) {
     let settings = JSON.parse(tls.cookies.get("tp_ps"))
     if (!settings) {
-        settings = {"fix_nav": false, "hide_icon": true}
+        settings = { "fix_nav": false, "hide_icon": true, "dark_mode": false }
     }
     settings[setting] = value
     tls.cookies.set("tp_ps", JSON.stringify(settings), 1000)
 
-    switch(setting) {
+    switch (setting) {
         case "fix_nav":
+            document.querySelector("#app-bar").style.position = (value) ? "fixed" : "absolute"
             break;
         case "hide_icon":
             hides_drawer_icon = value
             if (value) {
-                document.querySelector(".app-drawer__toggle").className = document.querySelector(".app-drawer__toggle").className.replace((document.querySelector(".app-bar__icons").className.indexOf("hidden") > -1) ? "hidden":"showing", (document.querySelector(".app-bar__icons").className.indexOf("hidden") > -1) ? "showing":"hidden")
+                document.querySelector(".app-drawer__toggle").className = document.querySelector(".app-drawer__toggle").className.replace((document.querySelector(".app-bar__icons").className.indexOf("hidden") > -1) ? "hidden" : "showing", (document.querySelector(".app-bar__icons").className.indexOf("hidden") > -1) ? "showing" : "hidden")
             } else {
                 document.querySelector(".app-drawer__toggle").className = document.querySelector(".app-drawer__toggle").className.replace("hidden", "showing")
             }
+            break;
+        case "dark_mode":
+            if (value) {
+                document.querySelector("html").setAttribute("dark", "")
+            } else {
+                document.querySelector("html").removeAttribute("dark")
+            }
+            tls.cookies.set("theme", (value) ? "dark" : "light", 1000)
             break;
         default:
             break;
     }
 }
 
-var settings_list = ["fix_nav", "hide_icon"]
+var settings_list = ["fix_nav", "hide_icon", "dark_mode"]
 for (i = 0; i < settings_list.length; i++) {
     setPageSetting(settings_list[i], document.querySelector("#ps_" + settings_list[i]).checked)
 }
@@ -229,6 +239,10 @@ document.querySelector("#ps_hide_icon").onclick = function() {
     setPageSetting("hide_icon", this.checked)
 }
 
-window.addEventListener("beforeunload", function (event) {
+document.querySelector("#ps_dark_mode").onclick = function() {
+    setPageSetting("dark_mode", this.checked)
+}
+
+window.addEventListener("beforeunload", function(event) {
     document.querySelector(".app-bar").className += " app-bar--loading"
 })

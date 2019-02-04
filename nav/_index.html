@@ -162,11 +162,11 @@
                             <ul class="mdc-list" aria-orientation="vertical">Oops, there aren't any articles for this page.</ul>
                         </div>
                         <script>
-                            var pages = /*[import support-pages]*/[]
-                            /*pages = [
-                                {"title": "The Home Page", "description": "Working your way around the home page.", "url": "https://tutorialpaths.com/support/articles/0001/the-home-page"},
-                                {"title": "Filters and Layouts", "description": "Choosing the best filter and layout for you.", "url": "https://tutorialpaths.com/support/articles/0002/filters-and-layouts"}
-                            ]*/
+                            var pages = /*[import support-pages]*/ []
+                                /*pages = [
+                                    {"title": "The Home Page", "description": "Working your way around the home page.", "url": "https://tutorialpaths.com/support/articles/0001/the-home-page"},
+                                    {"title": "Filters and Layouts", "description": "Choosing the best filter and layout for you.", "url": "https://tutorialpaths.com/support/articles/0002/filters-and-layouts"}
+                                ]*/
 
                             if (pages.length > 0) {
                                 document.querySelector("#popup__support div table tbody td.articles div.content ul").innerHTML = ""
@@ -211,7 +211,7 @@
                     <span class="mdc-list-item__graphic material-icons">space_bar</span>
                     <span class="mdc-list-item__text">
                         <span class="mdc-list-item__primary-text">Fixed Nav Bar (some pages)</span>
-                        <span class="mdc-list-item__secondary-text">Fixes the navigation at the top of the screen.</span>
+                    <span class="mdc-list-item__secondary-text">Fixes the navigation at the top of the screen.</span>
                     </span>
                     <div class="mdc-checkbox mdc-list-item__meta">
                         <input type="checkbox" class="mdc-checkbox__native-control" id="ps_fix_nav">
@@ -227,10 +227,26 @@
                     <span class="mdc-list-item__graphic material-icons">menu</span>
                     <span class="mdc-list-item__text">
                         <span class="mdc-list-item__primary-text">Hide Drawer Toggle</span>
-                        <span class="mdc-list-item__secondary-text">Hides the drawer toggle when icons are showing.</span>
+                    <span class="mdc-list-item__secondary-text">Hides the drawer toggle when icons are showing.</span>
                     </span>
                     <div class="mdc-checkbox mdc-list-item__meta">
                         <input type="checkbox" class="mdc-checkbox__native-control" id="ps_hide_icon">
+                        <div class="mdc-checkbox__background">
+                            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24" style="color: white;">
+                                <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
+                            </svg>
+                            <div class="mdc-checkbox__mixedmark"></div>
+                        </div>
+                    </div>
+                </li>
+                <li class="mdc-list-item" onclick="">
+                    <span class="mdc-list-item__graphic material-icons">brightness_medium</span>
+                    <span class="mdc-list-item__text">
+                        <span class="mdc-list-item__primary-text">Dark Mode</span>
+                    <span class="mdc-list-item__secondary-text">Makes everything dark.</span>
+                    </span>
+                    <div class="mdc-checkbox mdc-list-item__meta">
+                        <input type="checkbox" class="mdc-checkbox__native-control" id="ps_dark_mode">
                         <div class="mdc-checkbox__background">
                             <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24" style="color: white;">
                                 <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
@@ -252,7 +268,11 @@
             function getPageSetting(setting) {
                 let settings = JSON.parse(tls.cookies.get("tp_ps"))
                 if (!settings) {
-                    settings = {"fix_nav": false, "hide_icon": true}
+                    settings = {
+                        "fix_nav": false,
+                        "hide_icon": true,
+                        "dark_mode": false
+                    }
                     tls.cookies.set("tp_ps", JSON.stringify(settings))
                 }
                 return settings[setting]
@@ -260,6 +280,7 @@
 
             document.querySelector("#ps_fix_nav").checked = getPageSetting("fix_nav")
             document.querySelector("#ps_hide_icon").checked = getPageSetting("hide_icon")
+            document.querySelector("#ps_dark_mode").checked = getPageSetting("dark_mode")
         </script>
     </div>
 
