@@ -1,38 +1,37 @@
 @import '../gl/style.scss';
-
 .mdc-list-item--partial,
 .mdc-list-item--partial i {
     color: rgba(98, 0, 238, 0.87) !important;
 }
 
 #main-content {
-    background-color: white;
+    background-color: var(--mdc-theme-surface);
 }
 
 body {
-  display: flex;
-  margin: 0px;
-  background-color: white;
+    display: flex;
+    margin: 0px;
+    background-color: var(--mdc-theme-surface);
 }
 
 div {
-    background-color: $mdc-theme-surface;
+    background-color: var(--mdc-theme-surface);
 }
 
 .mdc-drawer-app-content {
-  flex: auto;
-  overflow: auto;
+    flex: auto;
+    overflow: auto;
 }
 
 .main-content {
-  overflow: auto;
-  height: 100%;
+    overflow: auto;
+    height: 100%;
 }
 
 .app-bar {
-  height: 56px;
-  background-color: white;
-  border-bottom: 1px solid rgba(211, 211, 211, 0.4);
+    height: 56px;
+    background-color: var(--mdc-theme-surface);
+    border-bottom: 1px solid var(--mdc-theme-outline);
 }
 
 .app-bar .mdc-linear-progress {
@@ -45,7 +44,7 @@ div {
 
 .app-drawer__toggle {
     transition-duration: 0.3s;
-    color: $mdc-theme-primary !important;
+    color: var(--mdc-theme-primary) !important;
 }
 
 .app-drawer__toggle.hidden {
@@ -54,9 +53,9 @@ div {
 }
 
 .app-drawer {
-    @include mdc-drawer-activated-overlay-color($mdc-theme-secondary);
-    @include mdc-drawer-item-activated-text-ink-color($mdc-theme-secondary);
-    @include mdc-drawer-item-activated-icon-ink-color($mdc-theme-secondary);
+    /*@include mdc-drawer-activated-overlay-color(var(--mdc-theme-secondary));
+    @include mdc-drawer-item-activated-text-ink-color(var(--mdc-theme-secondary));
+    @include mdc-drawer-item-activated-icon-ink-color(var(--mdc-theme-secondary));*/
 }
 
 .mdc-top-app-bar__row {
@@ -103,7 +102,7 @@ div {
     min-height: 50px;
     margin: 0px auto;
     z-index: 101;
-    background-color: white;
+    background-color: var(--mdc-theme-surface);
     border-radius: 4px;
 }
 
@@ -136,7 +135,7 @@ div {
 }
 
 .app-bar__icons button {
-    color: $mdc-theme-primary !important;
+    color: var(--mdc-theme-primary) !important;
     width: 38px;
     @include mdc-icon-button-size(24px, 24px, 5px);
 }
@@ -173,11 +172,10 @@ div {
     opacity: 0;
 }
 
-
 .app-bar__button--search {
     padding-top: 8px;
     padding-left: 5px;
-    color: $mdc-theme-primary !important;
+    color: var(--mdc-theme-primary) !important;
     outline: none;
     cursor: pointer;
 }
@@ -198,8 +196,8 @@ div {
 
 #popup__search input,
 .app-bar__search input {
-    @include mdc-text-field-label-color($mdc-theme-secondary);
-    @include mdc-text-field-focused-outline-color($mdc-theme-secondary);
+    /*@include mdc-text-field-label-color(var(--mdc-theme-secondary));
+    @include mdc-text-field-focused-outline-color(var(--mdc-theme-secondary));*/
 }
 
 #popup__support div table tbody td {
