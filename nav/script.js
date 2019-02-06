@@ -4,7 +4,10 @@ import { MDCTopAppBar } from "@material/top-app-bar";
 import { MDCTextField } from '@material/textfield';
 import { MDCCheckbox } from '@material/checkbox';
 
-void(new MDCCheckbox(document.querySelector('.mdc-checkbox')))
+var elms = document.querySelectorAll('.mdc-checkbox')
+for (var i = 0; i < elms.length; i++) {
+    void(new MDCCheckbox(elms[i]))
+}
 
 var drawer = MDCDrawer.attachTo(document.querySelector('.mdc-drawer'));
 const topAppBar = MDCTopAppBar.attachTo(document.getElementById('app-bar'));
