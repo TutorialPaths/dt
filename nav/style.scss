@@ -36,6 +36,16 @@ div {
     border-bottom: 1px solid var(--mdc-theme-outline);
 }
 
+html .app-bar div section span.mdc-top-app-bar__title img {
+    content: url('//dom.tutorialpaths.com/branding/long.png');
+    cursor: pointer;
+}
+
+html[dark] .app-bar div section span.mdc-top-app-bar__title img {
+    content: url('//dom.tutorialpaths.com/branding/long-inverted.png');
+    cursor: pointer;
+}
+
 .app-bar .mdc-linear-progress {
     display: none;
 }
@@ -139,7 +149,9 @@ div {
 .app-bar__icons button {
     color: var(--mdc-theme-primary) !important;
     width: 38px;
-    @include mdc-icon-button-size(24px, 24px, 5px);
+    @include mdc-icon-button-size(24px,
+    24px,
+    5px);
 }
 
 .app-bar__icons button.first-of-set {
